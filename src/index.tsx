@@ -1,22 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { BrowserRouter, Route, Switch, withRouter } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  useLocation,
+  withRouter,
+} from "react-router-dom";
 import DogPage from "./pages/DogPage/DogPage";
 import ExcoPage from "./pages/ExcoPage/ExcoPage";
 import reportWebVitals from "./reportWebVitals";
+import { AnimatePresence, motion } from "framer-motion";
+import App from "./App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={withRouter(DogPage)}></Route>
-          <Route exact path="/exco" component={withRouter(ExcoPage)}></Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

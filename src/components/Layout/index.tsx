@@ -20,22 +20,22 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
           selectedKeys={[page]}
         >
           <Menu.Item style={s.Menu} key="dogs">
-            Our Dogs
+            <strong>Our Dogs</strong>
             <Link to="/" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="exco">
-            Our Exco
+            <strong>Our Exco</strong>
             <Link to="/exco" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="activities">
-            What We Do
+            <strong>What We Do</strong>
             <Link to="/" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="activities">
-            Contact Us
+            <strong>Contact Us</strong>
             <Link to="/contact" />
           </Menu.Item>
         </Menu>

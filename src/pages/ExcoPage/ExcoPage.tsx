@@ -8,7 +8,7 @@ const { Title, Text } = Typography;
 const DogArray = [1, 1, 1, 1, 1];
 
 const ExcoPage: FC = () => (
-  <div className="App">
+  <>
     <DefaultLayout page={"exco"}></DefaultLayout>
     <div style={box}>
       <div style={text}>
@@ -18,7 +18,7 @@ const ExcoPage: FC = () => (
       </div>
       {<img height="400px" width="100%" src={Background}></img>}
     </div>
-  </div>
+  </>
 );
 
 const box: CSSProperties = {
