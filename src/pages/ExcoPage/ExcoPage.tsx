@@ -4,6 +4,8 @@ import Background from "../../Resources/Images/Background/exco.jpeg";
 import DefaultLayout from "../../components/Layout";
 import Dogs from "../../components/Dogs";
 import { motion } from "framer-motion";
+import { CSSTransition } from "react-transition-group";
+import "../../App.css";
 
 const { Title, Text } = Typography;
 const pageVariants = {
@@ -42,23 +44,22 @@ const pageTransition = {
 
 const ExcoPage: FC = () => (
   <>
-    <DefaultLayout page={"exco"}></DefaultLayout>
-    <motion.div
-      style={{ position: "absolute" }}
-      exit="out"
-      initial="initial"
-      animate="in"
-      transition={pageTransition}
-      variants={pageVariants}
-    >
-      <div style={box}>
-        <div style={text}>
-          <Text style={{ fontSize: "60px", color: "white" }}>
-            <b>Our Exco</b>
-          </Text>
+    <motion.div exit={{ opacity: 0 }}>
+      <CSSTransition
+        classNames="fadeImage"
+        in={true}
+        appear={true}
+        timeout={1000}
+      >
+        <div style={box}>
+          <div style={text}>
+            <Text style={{ fontSize: "60px", color: "white" }}>
+              <b>Our Exco</b>
+            </Text>
+          </div>
+          {<img height="400px" width="100%" src={Background}></img>}
         </div>
-        {<img height="400px" width="100%" src={Background}></img>}
-      </div>
+      </CSSTransition>
     </motion.div>
   </>
 );

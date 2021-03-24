@@ -1,6 +1,6 @@
-import React, { FC, CSSProperties, useState } from "react";
+import React, { FC, CSSProperties } from "react";
 import { Button, Typography, Row } from "antd";
-import Background from "../../Resources/Images/Background/dogs.jpeg";
+import Background from "../../Resources/Images/Background/contact-page.jpeg";
 import DefaultLayout from "../../components/Layout";
 import Dogs from "../../components/Dogs";
 import { motion } from "framer-motion";
@@ -25,38 +25,42 @@ const pageVariants = {
     scale: 1.2,
   },
 };
+// const pageTransition = {
+//   type: "tween",
+//   ease: "anticipate",
+//   duration: 0.5,
+// };
 const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 1,
+  in: {
+    opacity: 1,
+    x: 0,
+  },
+  out: {
+    opacity: 0,
+    x: "-100vw",
+  },
 };
-
-const DogPage: FC = () => {
-  return (
-    <>
-      <motion.div exit={{ opacity: 0 }}>
-        <CSSTransition
-          classNames="fadeImage"
-          in={true}
-          appear={true}
-          timeout={20000}
-        >
-          <div style={box}>
-            <div style={text}>
-              <Text style={{ fontSize: "60px", color: "white" }}>
-                <b>Our Dogs</b>
-              </Text>
-            </div>
-            {<img height="400px" width="100%" src={Background}></img>}
+const ContactPage: FC = () => (
+  <>
+    <motion.div exit={{ opacity: 0 }}>
+      <CSSTransition
+        classNames="fadeImage"
+        in={true}
+        appear={true}
+        timeout={1000}
+      >
+        <div style={box}>
+          <div style={text}>
+            <Text style={{ fontSize: "60px", color: "white" }}>
+              <b>Contact Us</b>
+            </Text>
           </div>
-        </CSSTransition>
-        <CSSTransition classNames="fade" in={true} appear={true} timeout={5000}>
-          <Dogs />
-        </CSSTransition>
-      </motion.div>
-    </>
-  );
-};
+          {<img height="400px" width="100%" src={Background}></img>}
+        </div>
+      </CSSTransition>
+    </motion.div>
+  </>
+);
 
 const box: CSSProperties = {
   position: "relative",
@@ -86,4 +90,4 @@ const s = {
   },
 };
 
-export default DogPage;
+export default ContactPage;

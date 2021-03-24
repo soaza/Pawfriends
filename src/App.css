@@ -38,3 +38,39 @@
     transform: rotate(360deg);
   }
 }
+
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fadeImage-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms linear;
+  transition-delay: 1.5s;
+}
+
+.fadeImage-appear.fadeImage-appear-active {
+  transition-delay: 1s;
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fadeImage-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* .fade-exit {
+
+} */

@@ -25,7 +25,7 @@ const DogInfo: FC<{ dogSelected: string; modal: boolean; showModal: any }> = ({
   showModal,
 }) => {
   const filteredImages = images.filter((image) => image.dog == dogSelected);
-  filteredImages.map((e) => console.log(e.src));
+  // filteredImages.map((e) => console.log(e.src));
   return (
     <>
       <Modal

@@ -8,7 +8,7 @@ const { Header, Content, Footer } = Layout;
 const DefaultLayout: FC<{ page: string }> = ({ page }) => {
   return (
     <Layout>
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+      <Header style={{ position: "relative", zIndex: 1, width: "100%" }}>
         <div className="logo" />
         <Menu
           style={{
@@ -20,19 +20,19 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
           mode="horizontal"
           selectedKeys={[page]}
         >
-          <Menu.Item style={s.Menu} key="dogs">
+          <Menu.Item style={s.Menu} key="/dogs">
             <strong>Our Dogs</strong>
             <Link to="/dogs" />
           </Menu.Item>
 
-          <Menu.Item style={s.Menu} key="exco">
+          <Menu.Item style={s.Menu} key="/exco">
             <strong>Our Exco</strong>
             <Link to="/exco" />
           </Menu.Item>
 
           <Menu.Item
             style={{ marginRight: "10px", color: "black", background: "white" }}
-            key="logo"
+            key="/mainpage"
           >
             <strong>NUS Pawfriends </strong>
             <img
@@ -40,15 +40,15 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
               width="16px"
               src={process.env.PUBLIC_URL + "/paw.png"}
             ></img>
-            <Link to="/dogs" />
+            <Link to="/" />
           </Menu.Item>
 
-          <Menu.Item style={s.Menu} key="activities">
+          <Menu.Item style={s.Menu} key="/activity">
             <strong>What We Do</strong>
             <Link to="/activity" />
           </Menu.Item>
 
-          <Menu.Item style={s.Menu} key="contact">
+          <Menu.Item style={s.Menu} key="/contact">
             <strong>Contact Us</strong>
             <Link to="/contact" />
           </Menu.Item>
