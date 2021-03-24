@@ -1,6 +1,6 @@
 import React, { FC, CSSProperties } from "react";
 import { Button, Typography, Row } from "antd";
-import Background from "../../Resources/Images/Background/exco.jpeg";
+import Background from "../../Resources/Images/Background/activity-page.jpeg";
 import DefaultLayout from "../../components/Layout";
 import Dogs from "../../components/Dogs";
 import { motion } from "framer-motion";
@@ -29,9 +29,9 @@ const pageTransition = {
   duration: 0.5,
 };
 
-const ExcoPage: FC = () => (
+const ActivityPage: FC = () => (
   <>
-    <DefaultLayout page={"exco"}></DefaultLayout>
+    <DefaultLayout page={"activities"}></DefaultLayout>
     <motion.div
       style={{ position: "absolute" }}
       exit="out"
@@ -43,7 +43,7 @@ const ExcoPage: FC = () => (
       <div style={box}>
         <div style={text}>
           <Text style={{ fontSize: "60px", color: "white" }}>
-            <b>Our Exco</b>
+            <b>What We Do</b>
           </Text>
         </div>
         {<img height="400px" width="100%" src={Background}></img>}
@@ -80,4 +80,4 @@ const s = {
   },
 };
 
-export default ExcoPage;
+export default ActivityPage;

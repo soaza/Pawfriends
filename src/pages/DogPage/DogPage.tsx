@@ -1,6 +1,6 @@
 import React, { FC, CSSProperties } from "react";
 import { Button, Typography, Row } from "antd";
-import Background from "../../Resources/Images/background.jpeg";
+import Background from "../../Resources/Images/Background/dogs.jpeg";
 import DefaultLayout from "../../components/Layout";
 import Dogs from "../../components/Dogs";
 import { motion } from "framer-motion";
@@ -26,7 +26,7 @@ const pageVariants = {
 const pageTransition = {
   type: "tween",
   ease: "anticipate",
-  duration: 1,
+  duration: 0.5,
 };
 
 const DogPage: FC = () => (

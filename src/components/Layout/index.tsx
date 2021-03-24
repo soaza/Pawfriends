@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
-import "../../App.css";
 import { Layout, Menu, Breadcrumb } from "antd";
+import "../../App.css";
+
 import { Link, BrowserRouter as Router } from "react-router-dom";
 
 const { Header, Content, Footer } = Layout;
@@ -29,12 +30,24 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
             <Link to="/exco" />
           </Menu.Item>
 
-          <Menu.Item style={s.Menu} key="activities">
-            <strong>What We Do</strong>
-            <Link to="/" />
+          <Menu.Item
+            style={{ marginRight: "10px", color: "black", background: "white" }}
+            key="logo"
+          >
+            <strong>NUS Pawfriends </strong>
+            <img
+              height="16px"
+              width="16px"
+              src={process.env.PUBLIC_URL + "/paw.png"}
+            ></img>
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="activities">
+            <strong>What We Do</strong>
+            <Link to="/activity" />
+          </Menu.Item>
+
+          <Menu.Item style={s.Menu} key="contact">
             <strong>Contact Us</strong>
             <Link to="/contact" />
           </Menu.Item>
