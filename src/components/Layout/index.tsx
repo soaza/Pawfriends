@@ -22,7 +22,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
         >
           <Menu.Item style={s.Menu} key="dogs">
             <strong>Our Dogs</strong>
-            <Link to="/" />
+            <Link to="/dogs" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="exco">
@@ -40,6 +40,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
               width="16px"
               src={process.env.PUBLIC_URL + "/paw.png"}
             ></img>
+            <Link to="/dogs" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="activities">

@@ -26,6 +26,7 @@ const App: FC = () => {
           <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
               <Route exact path="/" component={DogPage}></Route>
+              <Route exact path="/dogs" component={DogPage}></Route>
               <Route path="/exco" component={ExcoPage}></Route>
               <Route path="/activity" component={ActivityPage}></Route>
             </Switch>
