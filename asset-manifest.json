@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Pawfriends/static/css/main.5c4b5617.chunk.css",
+    "main.js": "/Pawfriends/static/js/main.8b0c4f45.chunk.js",
+    "main.js.map": "/Pawfriends/static/js/main.8b0c4f45.chunk.js.map",
+    "runtime-main.js": "/Pawfriends/static/js/runtime-main.4ead1087.js",
+    "runtime-main.js.map": "/Pawfriends/static/js/runtime-main.4ead1087.js.map",
+    "static/css/2.de2ac02e.chunk.css": "/Pawfriends/static/css/2.de2ac02e.chunk.css",
+    "static/js/2.0233cee0.chunk.js": "/Pawfriends/static/js/2.0233cee0.chunk.js",
+    "static/js/2.0233cee0.chunk.js.map": "/Pawfriends/static/js/2.0233cee0.chunk.js.map",
+    "static/js/3.21feed96.chunk.js": "/Pawfriends/static/js/3.21feed96.chunk.js",
+    "static/js/3.21feed96.chunk.js.map": "/Pawfriends/static/js/3.21feed96.chunk.js.map",
+    "index.html": "/Pawfriends/index.html",
+    "static/css/2.de2ac02e.chunk.css.map": "/Pawfriends/static/css/2.de2ac02e.chunk.css.map",
+    "static/css/main.5c4b5617.chunk.css.map": "/Pawfriends/static/css/main.5c4b5617.chunk.css.map",
+    "static/js/2.0233cee0.chunk.js.LICENSE.txt": "/Pawfriends/static/js/2.0233cee0.chunk.js.LICENSE.txt",
+    "static/media/activity-page.ade91645.jpeg": "/Pawfriends/static/media/activity-page.ade91645.jpeg",
+    "static/media/contact-page.52c0117b.jpeg": "/Pawfriends/static/media/contact-page.52c0117b.jpeg",
+    "static/media/dogs.7a771fcb.jpeg": "/Pawfriends/static/media/dogs.7a771fcb.jpeg",
+    "static/media/exco.a4f2d53d.jpeg": "/Pawfriends/static/media/exco.a4f2d53d.jpeg",
+    "static/media/main-page.258bf262.jpeg": "/Pawfriends/static/media/main-page.258bf262.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ead1087.js",
+    "static/css/2.de2ac02e.chunk.css",
+    "static/js/2.0233cee0.chunk.js",
+    "static/css/main.5c4b5617.chunk.css",
+    "static/js/main.8b0c4f45.chunk.js"
+  ]
+}
