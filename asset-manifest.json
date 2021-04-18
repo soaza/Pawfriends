@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Pawfriends/static/css/main.5c4b5617.chunk.css",
-    "main.js": "/Pawfriends/static/js/main.8b0c4f45.chunk.js",
-    "main.js.map": "/Pawfriends/static/js/main.8b0c4f45.chunk.js.map",
+    "main.js": "/Pawfriends/static/js/main.2959144b.chunk.js",
+    "main.js.map": "/Pawfriends/static/js/main.2959144b.chunk.js.map",
     "runtime-main.js": "/Pawfriends/static/js/runtime-main.4ead1087.js",
     "runtime-main.js.map": "/Pawfriends/static/js/runtime-main.4ead1087.js.map",
     "static/css/2.de2ac02e.chunk.css": "/Pawfriends/static/css/2.de2ac02e.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.de2ac02e.chunk.css",
     "static/js/2.0233cee0.chunk.js",
     "static/css/main.5c4b5617.chunk.css",
-    "static/js/main.8b0c4f45.chunk.js"
+    "static/js/main.2959144b.chunk.js"
   ]
 }
