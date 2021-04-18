@@ -36,6 +36,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
           >
             <strong>NUS Pawfriends </strong>
             <img
+              color="white"
               height="16px"
               width="16px"
               src={process.env.PUBLIC_URL + "/paw.png"}

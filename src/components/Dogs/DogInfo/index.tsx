@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import images from "../../Gallery/images";
+import pic from "../../../Resources/Images/Dogs/Hugo_2.jpg";
 import {
   Modal,
   Typography,
@@ -19,13 +20,12 @@ const data = [
   "Los Angeles battles huge wildfires.",
 ];
 
-const DogInfo: FC<{ dogSelected: string; modal: boolean; showModal: any }> = ({
-  dogSelected,
+const DogInfo: FC<{ dog: string; modal: boolean; showModal: any }> = ({
+  dog,
   modal,
   showModal,
 }) => {
-  const filteredImages = images.filter((image) => image.dog == dogSelected);
-  // filteredImages.map((e) => console.log(e.src));
+  const filteredImages = images.filter((image) => image.dog == dog);
   return (
     <>
       <Modal
@@ -38,21 +38,49 @@ const DogInfo: FC<{ dogSelected: string; modal: boolean; showModal: any }> = ({
           <Col xs={24} lg={12} span={12}>
             <Carousel dotPosition="top">
               {filteredImages.map((image) => {
-                <img
-                  style={{ maxWidth: "100%", height: "auto" }}
-                  src={image.src}
-                ></img>;
+                return (
+                  <img
+                    style={{ maxWidth: "100%", height: "auto" }}
+                    src={image.src}
+                  ></img>
+                );
               })}
             </Carousel>
           </Col>
           <Col xs={24} lg={12} span={12}>
-            <Title style={{ textAlign: "center" }}>{dogSelected}</Title>
-            <List
-              style={{}}
+            <Title
+              style={{ fontFamily: "Cabin,sans-serif", textAlign: "center" }}
+            >
+              {dog}
+            </Title>
+            <Descriptions
+              style={{
+                borderBlock: "2px solid",
+
+                marginLeft: "20px",
+              }}
+              labelStyle={{
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+              contentStyle={{
+                fontSize: "16px",
+              }}
               bordered
-              dataSource={data}
-              renderItem={(item) => <List.Item>{item}</List.Item>}
-            />
+            >
+              <Descriptions.Item label="Gender" span={3}>
+                Insert Gender Here
+              </Descriptions.Item>
+              <Descriptions.Item label="Blood Type" span={3}>
+                Insert Blood Type Here
+              </Descriptions.Item>
+              <Descriptions.Item label="Breed" span={3}>
+                Insert Breed Here
+              </Descriptions.Item>
+              <Descriptions.Item label="Characteristics" span={3}>
+                Insert Characteristics Here
+              </Descriptions.Item>
+            </Descriptions>
           </Col>
         </Row>
       </Modal>

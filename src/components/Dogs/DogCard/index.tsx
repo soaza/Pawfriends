@@ -14,14 +14,9 @@ const DogCard: FC<{ dog: string }> = ({ dog }) => {
 
   const imageToShow = filteredImages[0].src;
   const [modal, showModal] = useState<boolean>(false);
-  const [dogSelected, setDog] = useState<string>("Lucky");
   return (
     <>
-      <DogInfo
-        dogSelected={dogSelected}
-        modal={modal}
-        showModal={showModal}
-      ></DogInfo>
+      <DogInfo dog={dog} modal={modal} showModal={showModal}></DogInfo>
       <Card
         hoverable
         onClick={(e) => {
