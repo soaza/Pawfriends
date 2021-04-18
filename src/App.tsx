@@ -27,7 +27,7 @@ const App: FC = () => {
         <div className="App">
           <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/" component={MainPage}></Route>
+              <Route exact path="/pawfriends" component={MainPage}></Route>
               <Route exact path="/dogs" component={DogPage}></Route>
               <Route path="/exco" component={ExcoPage}></Route>
               <Route path="/activity" component={ActivityPage}></Route>
