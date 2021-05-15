@@ -1,11 +1,14 @@
 import React, { FC, CSSProperties } from "react";
-import { Button, Typography, Row } from "antd";
+import { Typography, Card, Row, Col, Divider } from "antd";
 import Background from "../../Resources/Images/Background/exco.jpeg";
 
 import "../../App.css";
+import ExcoCard from "../../components/Exco/ExcoCard";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
+const { Meta } = Card;
 
+const excos = [1, 1, 1, 1, 1, 1];
 const ExcoPage: FC = () => (
   <>
     <div style={box}>
@@ -23,6 +26,17 @@ const ExcoPage: FC = () => (
         ></img>
       }
     </div>
+
+    <Row justify="center">
+      <Col span={18}>
+        <Row gutter={[20, 20]}>
+          {excos.map((exco) => {
+            return <ExcoCard />;
+          })}
+        </Row>
+      </Col>
+    </Row>
+    <div style={{ height: "50px" }}></div>
   </>
 );
 
@@ -45,12 +59,6 @@ const s = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    // color: "black",
-    // fontFamily: "Arial",
-    // fontSize: "50px",
-    // lineHeight: "48px",
-    // margin: " 0 0 50px",
-    // textShadow: "1px 1px 2px #082b34",
   },
 };
 

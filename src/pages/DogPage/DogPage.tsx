@@ -2,7 +2,6 @@ import * as React from "react";
 import { Button, Typography, Row } from "antd";
 import Background from "../../Resources/Images/Background/dogs.jpeg";
 import Dogs from "../../components/Dogs";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../App.css";
 import FadeIn from "react-fade-in";
 import { getDogs } from "../../common/api";
