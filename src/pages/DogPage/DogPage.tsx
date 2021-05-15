@@ -10,13 +10,6 @@ import { getDogs } from "../../common/api";
 const { Text } = Typography;
 const { useEffect, useState } = React;
 
-interface IDog {
-  dog_id: number;
-  dog_name: string;
-  dog_gender: string;
-  dog_age: number;
-}
-
 const DogPage: React.FC = () => {
   const [dogs, setDogs] = useState<IDog[]>();
 

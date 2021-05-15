@@ -1,10 +1,3 @@
-interface IDogImages {
-  dog: string;
-  id: number;
-  src: string;
-  description: string;
-}
-
 const images: IDogImages[] = [
   {
     dog: "Lucky",
@@ -32,13 +25,13 @@ const images: IDogImages[] = [
   },
   {
     dog: "Rambo",
-    id: 0,
+    id: 1,
     src: process.env.PUBLIC_URL + "/Dogs/Rambo.jpg",
     description: "",
   },
   {
     dog: "Rambo",
-    id: 1,
+    id: 0,
     src: process.env.PUBLIC_URL + "/Dogs/Rambo_2.jpg",
     description: "",
   },

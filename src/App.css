@@ -1,76 +1,11 @@
 @import "~antd/dist/antd.css";
 
-.App {
-  text-align: center;
+.ant-carousel .slick-dots li button {
+  background: black;
+  opacity: 0.4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.fade-appear {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fadeImage-appear {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fade-appear.fade-appear-active {
+.ant-carousel .slick-dots li.slick-active button {
   opacity: 1;
-  transition: opacity 1000ms linear;
-  transition-delay: 1.5s;
+  background: black;
 }
-
-.fadeImage-appear.fadeImage-appear-active {
-  transition-delay: 1s;
-  opacity: 1;
-  transition: opacity 1000ms linear;
-}
-
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fadeImage-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-/* .fade-exit {
-
-} */

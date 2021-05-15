@@ -9,6 +9,7 @@ import {
   List,
   Descriptions,
   Carousel,
+  Empty,
 } from "antd";
 
 const { Title } = Typography;
@@ -20,8 +21,14 @@ const data = [
   "Los Angeles battles huge wildfires.",
 ];
 
-const DogInfo: FC<any> = ({ dog, modal, showModal }) => {
-  const filteredImages = images.filter((image) => image.dog == dog);
+interface IProps {
+  dog: IDog;
+  modal: boolean;
+  showModal: (modal: boolean) => void;
+}
+
+const DogInfo: FC<IProps> = ({ dog, modal, showModal }) => {
+  const filteredImages = images.filter((image) => image.dog == dog.dog_name);
   return (
     <>
       <Modal
@@ -34,15 +41,20 @@ const DogInfo: FC<any> = ({ dog, modal, showModal }) => {
           <Col xs={24} lg={12} span={12}>
             <Carousel autoplay autoplaySpeed={3000} dotPosition="top">
               {filteredImages.map((image) => {
-                return <img style={{ maxWidth: "100%" }} src={image.src}></img>;
+                return (
+                  <img height="700px" object-fit="cover" src={image.src}></img>
+                );
               })}
             </Carousel>
+            {filteredImages.length == 0 && (
+              <Empty description={false} imageStyle={{ height: "500px" }} />
+            )}
           </Col>
           <Col xs={24} lg={12} span={12}>
             <Title
               style={{ fontFamily: "Cabin,sans-serif", textAlign: "center" }}
             >
-              {dog}
+              {dog.dog_name}
             </Title>
             <Descriptions
               style={{
@@ -60,14 +72,13 @@ const DogInfo: FC<any> = ({ dog, modal, showModal }) => {
               bordered
             >
               <Descriptions.Item label="Gender" span={3}>
-                Insert Gender Here
+                {dog.dog_gender}
               </Descriptions.Item>
-              <Descriptions.Item label="Blood Type" span={3}>
-                Insert Blood Type Here
+
+              <Descriptions.Item label="Age" span={3}>
+                {dog.dog_age}
               </Descriptions.Item>
-              <Descriptions.Item label="Breed" span={3}>
-                Insert Breed Here
-              </Descriptions.Item>
+
               <Descriptions.Item label="Characteristics" span={3}>
                 Insert Characteristics Here
               </Descriptions.Item>
