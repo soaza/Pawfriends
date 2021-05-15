@@ -1,64 +1,29 @@
 import React, { FC, CSSProperties } from "react";
-import { Button, Typography, Row } from "antd";
+import { Typography } from "antd";
 import Background from "../../Resources/Images/Background/activity-page.jpeg";
-import DefaultLayout from "../../components/Layout";
-import Dogs from "../../components/Dogs";
-import { motion } from "framer-motion";
-import { CSSTransition } from "react-transition-group";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import "../../App.css";
 
 const { Title, Text } = Typography;
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    x: "-100vw",
-    scale: 0.8,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    x: "100vw",
-    scale: 1.2,
-  },
-};
-// const pageTransition = {
-//   type: "tween",
-//   ease: "anticipate",
-//   duration: 0.5,
-// };
-const pageTransition = {
-  in: {
-    opacity: 1,
-    x: 0,
-  },
-  out: {
-    opacity: 0,
-    x: "-100vw",
-  },
-};
+
 const ActivityPage: FC = () => (
   <>
-    <motion.div exit={{ opacity: 0 }}>
-      <CSSTransition
-        classNames="fadeImage"
-        in={true}
-        appear={true}
-        timeout={1000}
-      >
-        <div style={box}>
-          <div style={text}>
-            <Text style={{ fontSize: "60px", color: "white" }}>
-              <b>What We Do</b>
-            </Text>
-          </div>
-          {<img height="400px" width="100%" src={Background}></img>}
-        </div>
-      </CSSTransition>
-    </motion.div>
+    <div style={box}>
+      <div style={text}>
+        <Text style={{ fontSize: "60px", color: "white" }}>
+          <b>What We Do</b>
+        </Text>
+      </div>
+      {
+        <img
+          style={{ objectFit: "cover" }}
+          height="400px"
+          width="100%"
+          src={Background}
+        ></img>
+      }
+    </div>
   </>
 );
 

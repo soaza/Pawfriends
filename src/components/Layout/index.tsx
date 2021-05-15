@@ -8,11 +8,10 @@ const { Header, Content, Footer } = Layout;
 const DefaultLayout: FC<{ page: string }> = ({ page }) => {
   return (
     <Layout>
-      <Header style={{ position: "relative", zIndex: 1, width: "100%" }}>
+      <Header style={{ zIndex: 1, width: "100%" }}>
         <div className="logo" />
         <Menu
           style={{
-            position: "relative",
             display: "flex",
             justifyContent: "center",
           }}
@@ -41,7 +40,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
               width="16px"
               src={process.env.PUBLIC_URL + "/paw.png"}
             ></img>
-            <Link to="/" />
+            <Link to="/pawfriends" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="/activity">

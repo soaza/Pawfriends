@@ -1,59 +1,33 @@
 import React, { FC, CSSProperties, useState } from "react";
 import { Button, Typography, Row } from "antd";
 import Background from "../../Resources/Images/Background/dogs.jpeg";
-import DefaultLayout from "../../components/Layout";
 import Dogs from "../../components/Dogs";
-import { motion } from "framer-motion";
-import { CSSTransition } from "react-transition-group";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../App.css";
+import FadeIn from "react-fade-in";
 
 const { Title, Text } = Typography;
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    x: "-100vw",
-    scale: 0.8,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    x: "100vw",
-    scale: 1.2,
-  },
-};
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 1,
-};
 
 const DogPage: FC = () => {
   return (
     <>
-      <motion.div exit={{ opacity: 0 }}>
-        <CSSTransition
-          classNames="fadeImage"
-          in={true}
-          appear={true}
-          timeout={20000}
-        >
-          <div style={box}>
-            <div style={text}>
-              <Text style={{ fontSize: "60px", color: "white" }}>
-                <b>Our Dogs</b>
-              </Text>
-            </div>
-            {<img height="400px" width="100%" src={Background}></img>}
-          </div>
-        </CSSTransition>
-        <CSSTransition classNames="fade" in={true} appear={true} timeout={5000}>
-          <Dogs />
-        </CSSTransition>
-      </motion.div>
+      <div style={box}>
+        <div style={text}>
+          <Text style={{ fontSize: "60px", color: "white" }}>
+            <b>Our Dogs</b>
+          </Text>
+        </div>
+        <img
+          style={{ objectFit: "cover" }}
+          height="400px"
+          width="100%"
+          src={Background}
+        ></img>
+      </div>
+
+      <FadeIn>
+        <Dogs />
+      </FadeIn>
     </>
   );
 };

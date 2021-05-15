@@ -36,14 +36,9 @@ const DogInfo: FC<{ dog: string; modal: boolean; showModal: any }> = ({
       >
         <Row>
           <Col xs={24} lg={12} span={12}>
-            <Carousel dotPosition="top">
+            <Carousel autoplay autoplaySpeed={3000} dotPosition="top">
               {filteredImages.map((image) => {
-                return (
-                  <img
-                    style={{ maxWidth: "100%", height: "auto" }}
-                    src={image.src}
-                  ></img>
-                );
+                return <img style={{ maxWidth: "100%" }} src={image.src}></img>;
               })}
             </Carousel>
           </Col>
