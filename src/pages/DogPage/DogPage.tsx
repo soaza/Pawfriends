@@ -1,14 +1,33 @@
-import React, { FC, CSSProperties, useState } from "react";
+import * as React from "react";
 import { Button, Typography, Row } from "antd";
 import Background from "../../Resources/Images/Background/dogs.jpeg";
 import Dogs from "../../components/Dogs";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../App.css";
 import FadeIn from "react-fade-in";
+import { getDogs } from "../../common/api";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
+const { useEffect, useState } = React;
 
-const DogPage: FC = () => {
+interface IDog {
+  dog_id: number;
+  dog_name: string;
+  dog_gender: string;
+  dog_age: number;
+}
+
+const DogPage: React.FC = () => {
+  const [dogs, setDogs] = useState<IDog[]>();
+
+  useEffect(() => {
+    const loadDogs = async () => {
+      const dogs = await getDogs();
+      setDogs(dogs);
+    };
+    loadDogs();
+  }, []);
+
   return (
     <>
       <div style={box}>
@@ -25,21 +44,23 @@ const DogPage: FC = () => {
         ></img>
       </div>
 
-      <FadeIn>
-        <Dogs />
-      </FadeIn>
+      {dogs && (
+        <FadeIn>
+          <Dogs dogs={dogs} />
+        </FadeIn>
+      )}
     </>
   );
 };
 
-const box: CSSProperties = {
+const box: React.CSSProperties = {
   position: "relative",
   textAlign: "center",
   color: "white",
   marginBottom: "64px",
 };
 
-const text: CSSProperties = {
+const text: React.CSSProperties = {
   position: "absolute",
   top: "50%",
   left: "50%",

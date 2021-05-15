@@ -20,11 +20,7 @@ const data = [
   "Los Angeles battles huge wildfires.",
 ];
 
-const DogInfo: FC<{ dog: string; modal: boolean; showModal: any }> = ({
-  dog,
-  modal,
-  showModal,
-}) => {
+const DogInfo: FC<any> = ({ dog, modal, showModal }) => {
   const filteredImages = images.filter((image) => image.dog == dog);
   return (
     <>
