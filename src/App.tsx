@@ -1,14 +1,7 @@
 import React, { FC } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  useLocation,
-  useHistory,
-  withRouter,
-} from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import DefaultLayout from "./components/Layout";
 import DogPage from "./pages/DogPage/DogPage";
 import ExcoPage from "./pages/ExcoPage/ExcoPage";
@@ -22,17 +15,15 @@ const App: FC = () => {
     <>
       <DefaultLayout page={location.pathname}></DefaultLayout>
 
-      <main style={{ overflowX: "hidden" }}>
-        <div className="App">
-          <Switch location={location} key={location.pathname}>
-            <Route exact path="/Pawfriends" component={MainPage}></Route>
-            <Route exact path="/dogs" component={DogPage}></Route>
-            <Route path="/exco" component={ExcoPage}></Route>
-            <Route path="/activity" component={ActivityPage}></Route>
-            <Route path="/contact" component={ContactPage}></Route>
-          </Switch>
-        </div>
-      </main>
+      <div className="App">
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/Pawfriends" component={MainPage}></Route>
+          <Route exact path="/dogs" component={DogPage}></Route>
+          <Route path="/exco" component={ExcoPage}></Route>
+          <Route path="/activity" component={ActivityPage}></Route>
+          <Route path="/contact" component={ContactPage}></Route>
+        </Switch>
+      </div>
     </>
   );
 };

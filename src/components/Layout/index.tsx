@@ -1,14 +1,14 @@
-import React, { FC, useState } from "react";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { FC } from "react";
+import { Layout, Menu } from "antd";
 import "../../App.css";
 
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const { Header, Content, Footer } = Layout;
+const { Header } = Layout;
 const DefaultLayout: FC<{ page: string }> = ({ page }) => {
   return (
     <Layout>
-      <Header style={{ zIndex: 1, width: "100%" }}>
+      <Header style={{ width: "100%" }}>
         <div className="logo" />
         <Menu
           style={{
