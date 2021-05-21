@@ -4,8 +4,9 @@ import Background from "../../Resources/Images/Background/activity-page.jpeg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "../../App.css";
+import ActivityBoard from "./ActivityBoard";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 const ActivityPage: FC = () => (
   <>
@@ -24,6 +25,8 @@ const ActivityPage: FC = () => (
         ></img>
       }
     </div>
+
+    <ActivityBoard />
   </>
 );
 

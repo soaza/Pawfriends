@@ -16,7 +16,7 @@ const DogCard: React.FC<{ dog: IDog }> = ({ dog }) => {
   const [modal, showModal] = useState<boolean>(false);
   return (
     <>
-      <Col span={8}>
+      <Col span={24} lg={8}>
         <DogInfo dog={dog} modal={modal} showModal={showModal}></DogInfo>
         <Row justify="center">
           <Card
@@ -33,7 +33,7 @@ const DogCard: React.FC<{ dog: IDog }> = ({ dog }) => {
                   src={imageToShow}
                 />
               ) : (
-                <Empty />
+                <Empty style={{ width: "100%" }} />
               )
             }
           >

@@ -6,6 +6,7 @@ import Dogs from "../../components/Dogs";
 import { motion } from "framer-motion";
 import { CSSTransition } from "react-transition-group";
 import "../../App.css";
+import Introduction from "./introduction";
 
 const { Title, Text } = Typography;
 
@@ -26,6 +27,8 @@ const MainPage: FC = () => (
         ></img>
       }
     </div>
+
+    <Introduction />
   </>
 );
 

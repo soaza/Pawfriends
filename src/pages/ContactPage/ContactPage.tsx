@@ -3,6 +3,7 @@ import { Button, Typography, Row } from "antd";
 import Background from "../../Resources/Images/Background/contact-page.jpeg";
 
 import "../../App.css";
+import ContactForm from "./ContactForm";
 
 const { Title, Text } = Typography;
 
@@ -23,6 +24,8 @@ const ContactPage: FC = () => (
         ></img>
       }
     </div>
+
+    <ContactForm />
   </>
 );
 

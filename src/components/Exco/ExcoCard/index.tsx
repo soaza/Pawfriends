@@ -5,7 +5,7 @@ const { Meta } = Card;
 const ExcoCard: React.FC = () => {
   return (
     <>
-      <Col span={8}>
+      <Col span={24} lg={8}>
         <Row justify="center">
           <Card
             hoverable
