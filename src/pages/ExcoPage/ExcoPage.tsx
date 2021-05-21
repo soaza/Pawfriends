@@ -17,18 +17,17 @@ const ExcoPage: FC = () => (
           <b>Our Exco</b>
         </Text>
       </div>
-      {
-        <img
-          style={{ objectFit: "cover" }}
-          height="400px"
-          width="100%"
-          src={Background}
-        ></img>
-      }
+
+      <img
+        style={{ objectFit: "cover" }}
+        height="400px"
+        width="100%"
+        src={Background}
+      ></img>
     </div>
 
     <Row justify="center">
-      <Col span={18}>
+      <Col span={20}>
         <Row gutter={[20, 20]}>
           {excos.map((exco) => {
             return <ExcoCard />;
