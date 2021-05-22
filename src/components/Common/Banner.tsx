@@ -1,18 +1,31 @@
 import React, { FC, CSSProperties } from "react";
 import { Typography } from "antd";
-import "../../App.css";
-import Introduction from "./introduction";
-import Banner from "../../components/Common/Banner";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
-const MainPage: FC = () => (
-  <>
-    <Banner title="NUS Pawfriends" bannerUrl="main-page" />
+interface IProps {
+  bannerUrl: string;
+  title: string;
+}
+const Banner: React.FC<IProps> = (props) => {
+  const { bannerUrl, title } = props;
 
-    <Introduction />
-  </>
-);
+  return (
+    <div style={box}>
+      <div style={text}>
+        <Text style={{ fontSize: "60px", color: "white" }}>
+          <b>{title}</b>
+        </Text>
+      </div>
+      <img
+        height="200px"
+        style={{ objectFit: "cover" }}
+        width="100%"
+        src={process.env.PUBLIC_URL + `/BannerImages/${bannerUrl}.jpeg`}
+      ></img>
+    </div>
+  );
+};
 
 const box: CSSProperties = {
   position: "relative",
@@ -42,4 +55,4 @@ const s = {
   },
 };
 
-export default MainPage;
+export default Banner;

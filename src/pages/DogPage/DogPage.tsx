@@ -5,6 +5,7 @@ import Dogs from "../../components/Dogs";
 import "../../App.css";
 import FadeIn from "react-fade-in";
 import { getDogs } from "../../common/api";
+import Banner from "../../components/Common/Banner";
 
 const { Text } = Typography;
 const { useEffect, useState } = React;
@@ -22,19 +23,7 @@ const DogPage: React.FC = () => {
 
   return (
     <>
-      <div style={box}>
-        <div style={text}>
-          <Text style={{ fontSize: "60px", color: "white" }}>
-            <b>Our Dogs</b>
-          </Text>
-        </div>
-        <img
-          style={{ objectFit: "cover" }}
-          height="400px"
-          width="100%"
-          src={Background}
-        ></img>
-      </div>
+      <Banner title="Our Dogs" bannerUrl="dogs" />
 
       {dogs && (
         <FadeIn>

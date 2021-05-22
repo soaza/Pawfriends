@@ -4,6 +4,7 @@ import Background from "../../Resources/Images/Background/exco.jpeg";
 
 import "../../App.css";
 import ExcoCard from "../../components/Exco/ExcoCard";
+import Banner from "../../components/Common/Banner";
 
 const { Text } = Typography;
 const { Meta } = Card;
@@ -11,20 +12,7 @@ const { Meta } = Card;
 const excos = [1, 1, 1, 1, 1, 1];
 const ExcoPage: FC = () => (
   <>
-    <div style={box}>
-      <div style={text}>
-        <Text style={{ fontSize: "60px", color: "white" }}>
-          <b>Our Exco</b>
-        </Text>
-      </div>
-
-      <img
-        style={{ objectFit: "cover" }}
-        height="400px"
-        width="100%"
-        src={Background}
-      ></img>
-    </div>
+    <Banner title="Our Exco" bannerUrl="exco" />
 
     <Row justify="center">
       <Col span={20}>

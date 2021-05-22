@@ -5,28 +5,18 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "../../App.css";
 import ActivityBoard from "./ActivityBoard";
+import FadeIn from "react-fade-in";
+import Banner from "../../components/Common/Banner";
 
 const { Text } = Typography;
 
 const ActivityPage: FC = () => (
   <>
-    <div style={box}>
-      <div style={text}>
-        <Text style={{ fontSize: "60px", color: "white" }}>
-          <b>What We Do</b>
-        </Text>
-      </div>
-      {
-        <img
-          style={{ objectFit: "cover" }}
-          height="400px"
-          width="100%"
-          src={Background}
-        ></img>
-      }
-    </div>
+    <Banner title="What we do" bannerUrl="activity-page" />
 
-    <ActivityBoard />
+    <FadeIn>
+      <ActivityBoard />
+    </FadeIn>
   </>
 );
 

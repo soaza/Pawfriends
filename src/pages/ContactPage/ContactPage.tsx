@@ -1,31 +1,20 @@
-import React, { FC, CSSProperties } from "react";
-import { Button, Typography, Row } from "antd";
-import Background from "../../Resources/Images/Background/contact-page.jpeg";
+import { FC, CSSProperties } from "react";
+import { Typography } from "antd";
 
 import "../../App.css";
 import ContactForm from "./ContactForm";
+import FadeIn from "react-fade-in";
+import Banner from "../../components/Common/Banner";
 
 const { Title, Text } = Typography;
 
 const ContactPage: FC = () => (
   <>
-    <div style={box}>
-      <div style={text}>
-        <Text style={{ fontSize: "60px", color: "white" }}>
-          <b>Contact Us</b>
-        </Text>
-      </div>
-      {
-        <img
-          height="400px"
-          style={{ objectFit: "cover" }}
-          width="100%"
-          src={Background}
-        ></img>
-      }
-    </div>
+    <Banner title="Contact Us" bannerUrl="contact-page" />
 
-    <ContactForm />
+    <FadeIn>
+      <ContactForm />
+    </FadeIn>
   </>
 );
 
