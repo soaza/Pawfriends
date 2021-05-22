@@ -3,14 +3,15 @@ import { Typography } from "antd";
 import "../../App.css";
 import Introduction from "./introduction";
 import Banner from "../../components/Common/Banner";
-
-const { Title, Text } = Typography;
+import FadeIn from "react-fade-in";
 
 const MainPage: FC = () => (
   <>
     <Banner title="NUS Pawfriends" bannerUrl="main-page" />
 
-    <Introduction />
+    <FadeIn>
+      <Introduction />
+    </FadeIn>
   </>
 );
 

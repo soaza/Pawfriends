@@ -40,7 +40,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
               width="16px"
               src={process.env.PUBLIC_URL + "/paw.png"}
             ></img>
-            <Link to="/pawfriends" />
+            <Link to="/" />
           </Menu.Item>
 
           <Menu.Item style={s.Menu} key="/activity">

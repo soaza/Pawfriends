@@ -1,13 +1,11 @@
 import * as React from "react";
-import { Button, Typography, Row } from "antd";
-import Background from "../../Resources/Images/Background/dogs.jpeg";
+import { Typography } from "antd";
 import Dogs from "../../components/Dogs";
 import "../../App.css";
 import FadeIn from "react-fade-in";
 import { getDogs } from "../../common/api";
 import Banner from "../../components/Common/Banner";
 
-const { Text } = Typography;
 const { useEffect, useState } = React;
 
 const DogPage: React.FC = () => {
