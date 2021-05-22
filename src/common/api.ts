@@ -1,4 +1,4 @@
-export const MAIN_URL = `http://localhost:3000`;
+export const MAIN_URL = `http://localhost:3001`;
 
 interface IRequest {
   endpoint: string;
