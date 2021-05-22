@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Typography } from "antd";
 import Dogs from "../../components/Dogs";
 import "../../App.css";
 import FadeIn from "react-fade-in";

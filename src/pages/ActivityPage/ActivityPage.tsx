@@ -1,14 +1,9 @@
-import React, { FC, CSSProperties } from "react";
-import { Typography } from "antd";
-import Background from "../../Resources/Images/Background/activity-page.jpeg";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { FC, CSSProperties } from "react";
 
 import "../../App.css";
 import ActivityBoard from "./ActivityBoard";
 import FadeIn from "react-fade-in";
 import Banner from "../../components/Common/Banner";
-
-const { Text } = Typography;
 
 const ActivityPage: FC = () => (
   <>

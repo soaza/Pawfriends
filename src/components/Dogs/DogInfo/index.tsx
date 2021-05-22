@@ -1,6 +1,5 @@
 import React, { FC, useState } from "react";
 import images from "../../Gallery/images";
-import pic from "../../../Resources/Images/Dogs/Hugo_2.jpg";
 import {
   Modal,
   Typography,

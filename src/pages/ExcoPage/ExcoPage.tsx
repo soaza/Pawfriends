@@ -1,5 +1,5 @@
 import { FC, CSSProperties } from "react";
-import { Typography, Card, Row, Col, Divider } from "antd";
+import { Row, Col } from "antd";
 
 import "../../App.css";
 import ExcoCard from "../../components/Exco/ExcoCard";

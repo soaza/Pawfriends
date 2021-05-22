@@ -6,8 +6,6 @@ import ContactForm from "./ContactForm";
 import FadeIn from "react-fade-in";
 import Banner from "../../components/Common/Banner";
 
-const { Title, Text } = Typography;
-
 const ContactPage: FC = () => (
   <>
     <Banner title="Contact Us" bannerUrl="contact-page" />

@@ -1,5 +1,4 @@
-import React, { FC, CSSProperties } from "react";
-import { Typography } from "antd";
+import { FC, CSSProperties } from "react";
 import "../../App.css";
 import Introduction from "./introduction";
 import Banner from "../../components/Common/Banner";
