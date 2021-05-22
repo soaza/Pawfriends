@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Card, Row, Col, Typography, Skeleton } from "antd";
 
+const Fade = require("react-reveal/Fade");
+
 const { Title } = Typography;
-const arr = [1, 1, 1, 1];
+const arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
 const ActivityBoard: React.FC = () => {
   return (
@@ -11,19 +13,21 @@ const ActivityBoard: React.FC = () => {
         <Col span={18}>
           {arr.map((post) => {
             return (
-              <Card
-                style={{
-                  marginTop: "20px",
-                  borderStyle: "solid",
-                  borderWidth: "5px",
-                  minHeight: "200px",
-                  borderRadius: "10px",
-                  width: "100%",
-                }}
-              >
-                <Title level={3}>21/5/21: Activity Details</Title>
-                <Skeleton avatar paragraph={{ rows: 4 }} />
-              </Card>
+              <Fade bottom>
+                <Card
+                  style={{
+                    marginTop: "20px",
+                    borderStyle: "solid",
+                    borderWidth: "5px",
+                    minHeight: "200px",
+                    borderRadius: "10px",
+                    width: "100%",
+                  }}
+                >
+                  <Title level={3}>21/5/21: Activity Details</Title>
+                  <Skeleton avatar paragraph={{ rows: 4 }} />
+                </Card>
+              </Fade>
             );
           })}
         </Col>
