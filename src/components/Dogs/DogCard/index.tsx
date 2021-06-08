@@ -6,7 +6,6 @@ import images from "../../Gallery/images";
 const { Meta } = Card;
 
 const DogCard: React.FC<{ dog: IDog }> = ({ dog }) => {
-  console.log(dog);
   // For each dog we only want the first picture as DP
   const filteredImages = images
     .filter((image) => image.dog == dog.dog_name)

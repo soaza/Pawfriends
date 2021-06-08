@@ -30,8 +30,6 @@ const Introduction: React.FC = () => {
           </Card>
         </Col>
       </Row>
-
-      <div style={{ height: "400px" }} />
     </>
   );
 };

@@ -12,8 +12,8 @@ const DogPage: React.FC = () => {
 
   useEffect(() => {
     const loadDogs = async () => {
-      const dogs = await getDogs();
-      setDogs(dogs);
+      const response = await getDogs();
+      setDogs(response.dogs);
     };
     loadDogs();
   }, []);

@@ -35,12 +35,6 @@ const s = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    // color: "black",
-    // fontFamily: "Arial",
-    // fontSize: "50px",
-    // lineHeight: "48px",
-    // margin: " 0 0 50px",
-    // textShadow: "1px 1px 2px #082b34",
   },
 };
 

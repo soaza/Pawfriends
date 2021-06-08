@@ -58,5 +58,6 @@ export async function getDogs(): Promise<any> {
   };
 
   const response = await get<any>(request);
+  console.log(response);
   return response;
 }

@@ -12,13 +12,6 @@ import {
 } from "antd";
 
 const { Title } = Typography;
-const data = [
-  "Racing car sprays burning fuel into crowd.",
-  "Japanese princess to wed commoner.",
-  "Australian walks 100km after outback crash.",
-  "Man charged over missing wedding girl.",
-  "Los Angeles battles huge wildfires.",
-];
 
 interface IProps {
   dog: IDog;
@@ -46,7 +39,10 @@ const DogInfo: FC<IProps> = ({ dog, modal, showModal }) => {
               })}
             </Carousel>
             {filteredImages.length == 0 && (
-              <Empty description={false} imageStyle={{ height: "500px" }} />
+              <Empty
+                description={false}
+                imageStyle={{ height: "500px", width: "100%" }}
+              />
             )}
           </Col>
           <Col xs={24} lg={12} span={12}>
@@ -57,8 +53,8 @@ const DogInfo: FC<IProps> = ({ dog, modal, showModal }) => {
             </Title>
             <Descriptions
               style={{
+                width: "100%",
                 borderBlock: "2px solid",
-
                 marginLeft: "20px",
               }}
               labelStyle={{

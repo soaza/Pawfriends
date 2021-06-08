@@ -16,9 +16,7 @@ const ContactForm: React.FC = () => {
             width: "100%",
           }}
         >
-          <Row justify="center">
-            <Title>Contact Us</Title>
-          </Row>
+          <Row justify="center">{/* <Title>Contact Us</Title> */}</Row>
           <Row justify="center">
             <FacebookFilled style={{ fontSize: "80px" }} />
             <InstagramFilled style={{ fontSize: "80px" }} />
