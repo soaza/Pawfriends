@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# NUS Pawfriends Website
+This website is built to be the new official website for NUS Pawfriends, serving as a platform to reach out to the committee and introuduce the club.
+<p>
+<i> Development still in progress</i>
+ </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech-stack Used:
+Front-end
+- React
+- Typescript
+- Ant-D Ui library
 
-## Available Scripts
+Back-end
+- Node.JS
+- Express.JS
+- PostgresSQL
 
-In the project directory, you can run:
+AWS S3 used to host images
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots
+<b>Main Page</b>
+![Screenshot 2021-06-08 at 10 45 52 PM](https://user-images.githubusercontent.com/65228562/121207156-a352af80-c8ab-11eb-9e00-1e9b871733e7.png)
 
-### `npm test`
+<b>Dogs Page</b>
+![Screenshot 2021-06-08 at 10 46 03 PM](https://user-images.githubusercontent.com/65228562/121207146-a0f05580-c8ab-11eb-8ce8-b3c70635a683.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<b>Exco Page</b>
+![Screenshot 2021-06-08 at 10 46 12 PM](https://user-images.githubusercontent.com/65228562/121207133-9e8dfb80-c8ab-11eb-91c2-cdbb4c9ea09b.png)
 
-### `npm run build`
+<b>What we do Page</b>
+ ![Screenshot 2021-06-08 at 10 46 21 PM](https://user-images.githubusercontent.com/65228562/121207123-9d5cce80-c8ab-11eb-8f7c-805d839f1a19.png)
+ 
+<b>Contact Us Page</b>
+![Screenshot 2021-06-08 at 10 46 29 PM](https://user-images.githubusercontent.com/65228562/121207102-9930b100-c8ab-11eb-804c-2521332c058b.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
