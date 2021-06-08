@@ -1,7 +1,8 @@
 # NUS Pawfriends Website
 This website is built to be the new official website for NUS Pawfriends, serving as a platform to reach out to the committee and introuduce the club.
-<br/>
+<p>
 <i> Development still in progress</i>
+ </p>
 
 ## Tech-stack Used:
 Front-end
