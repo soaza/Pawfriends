@@ -8,12 +8,15 @@ import Banner from "../../components/Common/Banner";
 const { useEffect, useState } = React;
 
 const DogPage: React.FC = () => {
-  const [dogs, setDogs] = useState<IDog[]>();
+  const [dogs, setDogs] = useState<IDogData[]>();
+  const [dogImages, setDogImages] = useState<IDogImageEndpoint[]>([]);
 
   useEffect(() => {
     const loadDogs = async () => {
       const response = await getDogs();
       setDogs(response.dogs);
+      setDogImages(response.images);
+      console.log(response);
     };
     loadDogs();
   }, []);
@@ -22,9 +25,9 @@ const DogPage: React.FC = () => {
     <>
       <Banner title="Our Dogs" bannerUrl="dogs" />
 
-      {dogs && (
+      {dogs && dogImages.length > 0 && (
         <FadeIn>
-          <Dogs dogs={dogs} />
+          <Dogs dogs={dogs} dogImages={dogImages} />
         </FadeIn>
       )}
     </>

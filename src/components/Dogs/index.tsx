@@ -2,14 +2,25 @@ import * as React from "react";
 import { Col, Row } from "antd";
 import DogCard from "./DogCard";
 
-const Dogs: React.FC<{ dogs: IDog[] }> = ({ dogs }) => {
+const Dogs: React.FC<{ dogs: IDogData[]; dogImages: IDogImageEndpoint[] }> = ({
+  dogs,
+  dogImages,
+}) => {
   return (
     <>
       <Row justify="center">
         <Col span={20}>
           <Row gutter={[20, 20]}>
-            {dogs.map((dog: IDog) => {
-              return <DogCard dog={dog} />;
+            {dogs.map((dog: IDogData) => {
+              const filteredImages = dogImages.filter(
+                (image) => image.dog_id === dog.dog_id
+              );
+              return (
+                <DogCard
+                  dog={dog}
+                  images={filteredImages ? filteredImages : []}
+                />
+              );
             })}
           </Row>
         </Col>

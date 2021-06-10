@@ -1,22 +1,25 @@
 import React, { FC, useState } from "react";
 import { Card, Row, Col, Empty } from "antd";
 import DogInfo from "../DogInfo";
-import images from "../../Gallery/images";
 
 const { Meta } = Card;
 
-const DogCard: React.FC<{ dog: IDog }> = ({ dog }) => {
-  // For each dog we only want the first picture as DP
-  const filteredImages = images
-    .filter((image) => image.dog == dog.dog_name)
-    .filter((image) => image.id == 0);
-
-  const imageToShow = filteredImages[0]?.src;
+const DogCard: React.FC<{ dog: IDogData; images: IDogImageEndpoint[] }> = ({
+  dog,
+  images,
+}) => {
+  const imageToShow = images?.filter((image) => image.gallery_position == 0)[0]
+    ?.image_url;
   const [modal, showModal] = useState<boolean>(false);
   return (
     <>
       <Col span={24} lg={8}>
-        <DogInfo dog={dog} modal={modal} showModal={showModal}></DogInfo>
+        <DogInfo
+          images={images}
+          dog={dog}
+          modal={modal}
+          showModal={showModal}
+        ></DogInfo>
         <Row justify="center">
           <Card
             hoverable

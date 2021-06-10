@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
-import images from "../../Gallery/images";
+import { ManOutlined, WomanOutlined } from "@ant-design/icons";
+
 import {
   Modal,
   Typography,
@@ -9,18 +10,21 @@ import {
   Descriptions,
   Carousel,
   Empty,
+  Card,
 } from "antd";
 
 const { Title } = Typography;
 
+const GalleryArr = [1, 2, 3, 4];
+
 interface IProps {
-  dog: IDog;
+  dog: IDogData;
+  images: IDogImageEndpoint[];
   modal: boolean;
   showModal: (modal: boolean) => void;
 }
 
-const DogInfo: FC<IProps> = ({ dog, modal, showModal }) => {
-  const filteredImages = images.filter((image) => image.dog == dog.dog_name);
+const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
   return (
     <>
       <Modal
@@ -29,55 +33,91 @@ const DogInfo: FC<IProps> = ({ dog, modal, showModal }) => {
         onCancel={() => showModal(false)}
         visible={modal}
       >
-        <Row>
-          <Col xs={24} lg={12} span={12}>
+        <Row justify="space-between">
+          <Col xs={24} lg={10} span={12}>
             <Carousel autoplay autoplaySpeed={3000} dotPosition="top">
-              {filteredImages.map((image) => {
-                return (
-                  <img height="700px" object-fit="cover" src={image.src}></img>
+              {GalleryArr.map((num) => {
+                const imageToDisplay = images.filter(
+                  (image) => image.gallery_position == num
+                )[0];
+
+                return imageToDisplay ? (
+                  <img
+                    height="700px"
+                    object-fit="cover"
+                    src={imageToDisplay.image_url}
+                  />
+                ) : (
+                  true
                 );
               })}
             </Carousel>
-            {filteredImages.length == 0 && (
+            {images.length == 0 && (
               <Empty
                 description={false}
                 imageStyle={{ height: "500px", width: "100%" }}
               />
             )}
           </Col>
-          <Col xs={24} lg={12} span={12}>
+
+          <Col lg={12} span={24}>
             <Title
-              style={{ fontFamily: "Cabin,sans-serif", textAlign: "center" }}
+              style={{
+                textAlign: "center",
+                fontSize: 60,
+                fontFamily: "Cabin,sans-serif",
+              }}
             >
               {dog.dog_name}
             </Title>
-            <Descriptions
+
+            <Row>
+              <Col span={24} lg={12}>
+                <p
+                  style={{
+                    textAlign: "center",
+                    fontSize: 60,
+                    color: dog.dog_gender === "Male" ? "#1790FF" : "pink",
+                  }}
+                >
+                  {dog.dog_gender}
+                  <br />
+                  {dog.dog_gender === "Male" ? (
+                    <ManOutlined />
+                  ) : (
+                    <WomanOutlined />
+                  )}
+                </p>
+              </Col>
+
+              <Col span={24} lg={12}>
+                <p style={{ textAlign: "center", fontSize: 30 }}>
+                  I am
+                  <br />
+                  <span style={{ fontSize: 60 }}> {dog.dog_age} </span>
+                  <br />
+                  years old!
+                </p>
+              </Col>
+            </Row>
+
+            <Card
               style={{
-                width: "100%",
-                borderBlock: "2px solid",
-                marginLeft: "20px",
+                borderStyle: "solid",
+                borderWidth: "5px",
+                borderRadius: "10px",
               }}
-              labelStyle={{
-                fontSize: "20px",
-                textAlign: "center",
-              }}
-              contentStyle={{
-                fontSize: "16px",
-              }}
-              bordered
             >
-              <Descriptions.Item label="Gender" span={3}>
-                {dog.dog_gender}
-              </Descriptions.Item>
-
-              <Descriptions.Item label="Age" span={3}>
-                {dog.dog_age}
-              </Descriptions.Item>
-
-              <Descriptions.Item label="Characteristics" span={3}>
-                Insert Characteristics Here
-              </Descriptions.Item>
-            </Descriptions>
+              <p
+                style={{
+                  fontFamily: "Cabin,sans-serif",
+                  textAlign: "center",
+                  fontSize: 24,
+                }}
+              >
+                {dog.dog_characteristics}
+              </p>
+            </Card>
           </Col>
         </Row>
       </Modal>
