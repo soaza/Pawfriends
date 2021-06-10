@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Card, Row, Col, Avatar, Typography } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 const Introduction: React.FC = () => {

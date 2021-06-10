@@ -10,11 +10,12 @@ interface IRequest {
 async function makeRequest(request: IRequest, method: string) {
   let url = `${MAIN_URL}/${request.endpoint}`;
 
-  //   if (request.params) {
-  //     Object.keys(request.params).forEach((param, ind) => {
-  //       url += `${ind === 0 ? "?" : "&"}${param}=${request.params[param]}`;
-  //     });
-  //   }
+  if (request.params) {
+    Object.keys(request.params).forEach((param, ind) => {
+      const paramsObj = request.params ? request.params : {};
+      url += `${ind === 0 ? "?" : "&"}${param}=${paramsObj[param]}`;
+    });
+  }
 
   const headers = {
     "Content-Type": "application/json",
@@ -47,10 +48,11 @@ async function post<T>(request: IRequest): Promise<T> {
   return await makeRequest(request, "POST");
 }
 
-// Called remove instead of delete because "delete" is a protected keyword
 async function remove<T>(request: IRequest): Promise<T> {
   return await makeRequest(request, "DELETE");
 }
+
+// Dogs
 
 export async function getDogs(): Promise<any> {
   const request: IRequest = {
@@ -58,6 +60,113 @@ export async function getDogs(): Promise<any> {
   };
 
   const response = await get<any>(request);
-  console.log(response);
   return response;
+}
+
+export async function updateDogInfo(dog: IDogData): Promise<boolean> {
+  const { dog_id, dog_gender, dog_name, dog_age, dog_characteristics } = dog;
+  const request: IRequest = {
+    endpoint: `update/dog`,
+    params: { dog_id, dog_gender, dog_name, dog_age, dog_characteristics },
+  };
+
+  const response = await patch<any>(request);
+  return response.success;
+}
+
+export async function postDogImage(
+  dog_id: number,
+  image_url: string,
+  gallery_position: number
+): Promise<boolean> {
+  const request: IRequest = {
+    endpoint: `post/dog_image`,
+    data: { dog_id, image_url, gallery_position },
+  };
+
+  const response = await post<any>(request);
+  return response.success;
+}
+
+// Exco
+
+export async function getExcos(): Promise<IExcoData[]> {
+  const request: IRequest = {
+    endpoint: `excos`,
+  };
+
+  const response = await get<any>(request);
+  return response;
+}
+
+export async function updateExcoInfo(exco: IExcoData): Promise<boolean> {
+  const {
+    exco_id,
+    exco_name,
+    exco_year_of_study,
+    exco_hobbies,
+    exco_favourite_dog,
+  } = exco;
+  const request: IRequest = {
+    endpoint: `update/exco`,
+    params: {
+      exco_id,
+      exco_name,
+      exco_year_of_study,
+      exco_hobbies,
+      exco_favourite_dog,
+    },
+  };
+
+  const response = await patch<any>(request);
+  return response.success;
+}
+
+// Main Page
+
+export async function getMainDescription(): Promise<string> {
+  const request: IRequest = {
+    endpoint: `mainpage`,
+  };
+
+  const response = await get<any>(request);
+  return response.pawfriends_description;
+}
+
+export async function updateMainDescription(
+  description: string
+): Promise<boolean> {
+  const request: IRequest = {
+    endpoint: `update/mainpage`,
+    params: {
+      description,
+    },
+  };
+
+  const response = await patch<any>(request);
+  return response.success;
+}
+
+// Activity Page
+export async function getActivityPosts(): Promise<IActivityPosts[]> {
+  const request: IRequest = {
+    endpoint: `activities`,
+  };
+
+  const response = await get<IActivityPosts[]>(request);
+  return response;
+}
+
+export async function updateActivityPost(
+  post: IActivityPosts
+): Promise<boolean> {
+  const { post_id, date_posted, activity_description } = post;
+
+  const request: IRequest = {
+    endpoint: `update/activity`,
+    params: { post_id, date_posted, activity_description },
+  };
+
+  const response = await patch<any>(request);
+  return response.success;
 }
