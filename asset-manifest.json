@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Pawfriends/static/css/main.5078b735.chunk.css",
-    "main.js": "/Pawfriends/static/js/main.6b31a610.chunk.js",
-    "main.js.map": "/Pawfriends/static/js/main.6b31a610.chunk.js.map",
+    "main.js": "/Pawfriends/static/js/main.a2c367f2.chunk.js",
+    "main.js.map": "/Pawfriends/static/js/main.a2c367f2.chunk.js.map",
     "runtime-main.js": "/Pawfriends/static/js/runtime-main.486b8e65.js",
     "runtime-main.js.map": "/Pawfriends/static/js/runtime-main.486b8e65.js.map",
     "static/css/2.de2ac02e.chunk.css": "/Pawfriends/static/css/2.de2ac02e.chunk.css",
-    "static/js/2.c96e0449.chunk.js": "/Pawfriends/static/js/2.c96e0449.chunk.js",
-    "static/js/2.c96e0449.chunk.js.map": "/Pawfriends/static/js/2.c96e0449.chunk.js.map",
+    "static/js/2.c27deab6.chunk.js": "/Pawfriends/static/js/2.c27deab6.chunk.js",
+    "static/js/2.c27deab6.chunk.js.map": "/Pawfriends/static/js/2.c27deab6.chunk.js.map",
     "index.html": "/Pawfriends/index.html",
     "static/css/2.de2ac02e.chunk.css.map": "/Pawfriends/static/css/2.de2ac02e.chunk.css.map",
     "static/css/main.5078b735.chunk.css.map": "/Pawfriends/static/css/main.5078b735.chunk.css.map",
-    "static/js/2.c96e0449.chunk.js.LICENSE.txt": "/Pawfriends/static/js/2.c96e0449.chunk.js.LICENSE.txt"
+    "static/js/2.c27deab6.chunk.js.LICENSE.txt": "/Pawfriends/static/js/2.c27deab6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.486b8e65.js",
     "static/css/2.de2ac02e.chunk.css",
-    "static/js/2.c96e0449.chunk.js",
+    "static/js/2.c27deab6.chunk.js",
     "static/css/main.5078b735.chunk.css",
-    "static/js/main.6b31a610.chunk.js"
+    "static/js/main.a2c367f2.chunk.js"
   ]
 }
