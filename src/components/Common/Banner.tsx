@@ -7,9 +7,10 @@ const { Text } = Typography;
 interface IProps {
   bannerUrl: string;
   title: string;
+  noMargin?: boolean;
 }
 const Banner: React.FC<IProps> = (props) => {
-  const { bannerUrl, title } = props;
+  const { bannerUrl, title, noMargin } = props;
 
   useEffect(() => {
     const objects = document.getElementsByClassName("asyncImage");
@@ -27,7 +28,7 @@ const Banner: React.FC<IProps> = (props) => {
   }, []);
 
   return (
-    <div style={box}>
+    <div style={{ ...box, marginBottom: !noMargin ? 64 : 0 }}>
       <div style={text}>
         <Text style={{ fontSize: "60px", color: "white" }}>
           <b>{title}</b>
@@ -55,7 +56,7 @@ const box: CSSProperties = {
   position: "relative",
   textAlign: "center",
   color: "white",
-  marginBottom: "64px",
+  // marginBottom: "64px",
 };
 
 const text: CSSProperties = {
