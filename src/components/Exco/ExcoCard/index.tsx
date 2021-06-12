@@ -20,7 +20,12 @@ const ExcoCard: React.FC<IProps> = (props) => {
             style={{ width: 300 }}
             cover={
               <>
-                <img style={{ height: 300 }} src={imageLink} />
+                <img
+                  style={{ objectFit: "cover" }}
+                  height={300}
+                  width={300}
+                  src={imageLink}
+                />
                 <div style={{ height: "50px", backgroundColor: "black" }}>
                   <p
                     style={{
