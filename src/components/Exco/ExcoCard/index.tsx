@@ -2,7 +2,15 @@ import * as React from "react";
 import { Card, Col, Row } from "antd";
 
 const { Meta } = Card;
-const ExcoCard: React.FC = () => {
+
+interface IProps {
+  exco: IExcoData;
+}
+const ExcoCard: React.FC<IProps> = (props) => {
+  const { exco } = props;
+  const imageLink =
+    process.env.PUBLIC_URL + `/ExcoImages/${exco.exco_name}.jpg`;
+
   return (
     <>
       <Col span={24} lg={8}>
@@ -12,9 +20,7 @@ const ExcoCard: React.FC = () => {
             style={{ width: 300 }}
             cover={
               <>
-                <img
-                  src={`https://pyxis.nymag.com/v1/imgs/310/524/bfe62024411af0a9d9cd23447121704d7a-11-spongebob-squarepants.2x.rhorizontal.w700.jpg`}
-                />
+                <img style={{ height: 300 }} src={imageLink} />
                 <div style={{ height: "50px", backgroundColor: "black" }}>
                   <p
                     style={{
@@ -24,22 +30,22 @@ const ExcoCard: React.FC = () => {
                       marginBottom: "0px",
                     }}
                   >
-                    <b> Project Director</b>
+                    <b>{exco.exco_role}</b>
                   </p>
                 </div>
               </>
             }
           >
             <Meta
-              title="Exco Name"
+              title={`${exco.exco_name}`}
               description={
                 <>
-                  <p>{`Favourite Dog: <Insert Text Here>`}</p>
-                  <p>{`Year: <Insert Text Here>`}</p>
+                  <p>{`Favourite Dog: ${exco.exco_favourite_dog}`}</p>
+                  <p>{`Year: ${exco.exco_year_of_study}`}</p>
                   <p>
-                    {`Tell me about yourself:`}
+                    {`Hobbies:`}
                     <br />
-                    {`<Insert Text Here>`}
+                    {`${exco.exco_hobbies ? exco.exco_hobbies : "-"}`}
                   </p>
                 </>
               }

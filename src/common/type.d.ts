@@ -33,6 +33,7 @@ interface IExcoData {
   exco_year_of_study: number;
   exco_hobbies: string;
   exco_favourite_dog: string;
+  exco_role: string;
   [key: string]: any;
 }
 
