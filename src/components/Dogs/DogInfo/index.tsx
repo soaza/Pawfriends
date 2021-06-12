@@ -65,7 +65,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
               style={{
                 textAlign: "center",
                 fontSize: 60,
-                fontFamily: "Cabin,sans-serif",
+                fontFamily: "Abel",
               }}
             >
               {dog.dog_name}
@@ -75,8 +75,10 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
               <Col span={24} lg={12}>
                 <p
                   style={{
+                    fontFamily: "Abel",
+
                     textAlign: "center",
-                    fontSize: 60,
+                    fontSize: 45,
                     color: dog.dog_gender === "Male" ? "#1790FF" : "pink",
                   }}
                 >
@@ -91,10 +93,16 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
               </Col>
 
               <Col span={24} lg={12}>
-                <p style={{ textAlign: "center", fontSize: 30 }}>
+                <p
+                  style={{
+                    fontFamily: "Abel",
+                    textAlign: "center",
+                    fontSize: 30,
+                  }}
+                >
                   I am
                   <br />
-                  <span style={{ fontSize: 60 }}> {dog.dog_age} </span>
+                  <span style={{ fontSize: 45 }}> {dog.dog_age} </span>
                   <br />
                   years old!
                 </p>
@@ -110,7 +118,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
             >
               <p
                 style={{
-                  fontFamily: "Cabin,sans-serif",
+                  fontFamily: "Abel",
                   textAlign: "center",
                   fontSize: 24,
                 }}

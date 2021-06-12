@@ -7,7 +7,7 @@ import Banner from "../../components/Common/Banner";
 
 const ActivityPage: FC = () => (
   <>
-    <Banner title="What we do" bannerUrl="activity-page" />
+    <Banner title="Our Activities" bannerUrl="activity-page" />
 
     <FadeIn>
       <ActivityBoard />
