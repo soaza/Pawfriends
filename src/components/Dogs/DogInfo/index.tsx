@@ -1,17 +1,7 @@
 import React, { FC, useState } from "react";
 import { ManOutlined, WomanOutlined } from "@ant-design/icons";
 
-import {
-  Modal,
-  Typography,
-  Row,
-  Col,
-  List,
-  Descriptions,
-  Carousel,
-  Empty,
-  Card,
-} from "antd";
+import { Modal, Typography, Row, Col, Carousel, Empty, Card, Grid } from "antd";
 
 const { Title } = Typography;
 
@@ -25,6 +15,9 @@ interface IProps {
 }
 
 const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
+  const bp = Grid.useBreakpoint();
+  const isMobile = (bp.xs || bp.sm) && !bp.md;
+
   return (
     <>
       <Modal
@@ -43,7 +36,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
 
                 return imageToDisplay ? (
                   <img
-                    height="700px"
+                    height={isMobile ? "300px" : "700px"}
                     object-fit="cover"
                     src={imageToDisplay.image_url}
                   />
@@ -72,7 +65,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
             </Title>
 
             <Row>
-              <Col span={24} lg={12}>
+              <Col span={12}>
                 <p
                   style={{
                     fontFamily: "Abel",
@@ -92,7 +85,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
                 </p>
               </Col>
 
-              <Col span={24} lg={12}>
+              <Col span={12}>
                 <p
                   style={{
                     fontFamily: "Abel",
