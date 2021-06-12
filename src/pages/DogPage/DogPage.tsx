@@ -40,7 +40,7 @@ const DogPage: React.FC = () => {
         />
       )}
 
-      {dogs && dogImages.length > 0 && (
+      {!loading && dogs && dogImages.length > 0 && (
         <FadeIn>
           <Dogs dogs={dogs} dogImages={dogImages} />
         </FadeIn>

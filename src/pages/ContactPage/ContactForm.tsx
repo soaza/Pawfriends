@@ -1,30 +1,33 @@
 import * as React from "react";
-import { Card, Row, Col, Typography } from "antd";
-import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
+import { Row, Col, Grid } from "antd";
 import { SocialIcon } from "react-social-icons";
 
 const ContactForm: React.FC = () => {
+  const bp = Grid.useBreakpoint();
+  const isMobile = (bp.xs || bp.sm) && !bp.md;
   return (
     <Row justify="center">
       <Col span={18}>
-        <Row justify="center">
-          <img
-            style={{ height: 300 }}
-            src={process.env.PUBLIC_URL + "/Dogs/Lucky.jpg"}
-          />
-          <img
-            style={{ height: 300 }}
-            src={process.env.PUBLIC_URL + "/Dogs/Hugo.jpg"}
-          />
-          <img
-            style={{ height: 300 }}
-            src={process.env.PUBLIC_URL + "/Dogs/Rambo_2.jpg"}
-          />
-          <img
-            style={{ height: 300 }}
-            src={process.env.PUBLIC_URL + "/Dogs/Rambo_and_Junie.jpg"}
-          />
-        </Row>
+        {!isMobile && (
+          <Row justify="center">
+            <img
+              style={{ height: 300 }}
+              src={process.env.PUBLIC_URL + "/Dogs/Lucky.jpg"}
+            />
+            <img
+              style={{ height: 300 }}
+              src={process.env.PUBLIC_URL + "/Dogs/Hugo.jpg"}
+            />
+            <img
+              style={{ height: 300 }}
+              src={process.env.PUBLIC_URL + "/Dogs/Rambo_2.jpg"}
+            />
+            <img
+              style={{ height: 300 }}
+              src={process.env.PUBLIC_URL + "/Dogs/Rambo_and_Junie.jpg"}
+            />
+          </Row>
+        )}
 
         <Row justify="center">
           <h2 style={{ textAlign: "center", fontSize: 30 }}>

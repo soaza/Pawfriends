@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Card, Row, Col, Avatar, Typography, Grid } from "antd";
+import { Card, Row, Col, Avatar, Typography, Grid, Skeleton } from "antd";
 import { getMainDescription } from "../../common/api";
 import ReactHTMLParser from "react-html-parser";
 
@@ -7,15 +7,17 @@ const { Title } = Typography;
 const { useEffect, useState } = React;
 const Introduction: React.FC = () => {
   const [intro, setIntro] = useState<string>();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const bp = Grid.useBreakpoint();
   const isMobile = (bp.xs || bp.sm) && !bp.md;
-  console.log(isMobile);
 
   useEffect(() => {
     const loadIntro = async () => {
+      setLoading(true);
       const desc = await getMainDescription();
       setIntro(desc);
+      setLoading(false);
     };
     loadIntro();
   }, []);
@@ -30,6 +32,7 @@ const Introduction: React.FC = () => {
             />
           </Row>
           <Title style={{ textAlign: "center" }}>NUS Pawfriends</Title>
+          {loading && <Skeleton />}
           {intro && <p style={{ fontSize: 16 }}>{ReactHTMLParser(intro)}</p>}
         </Col>
         <Col span={24} lg={10}>
