@@ -1,6 +1,5 @@
 {
   "homepage": "https://soaza.github.io/Pawfriends/",
-  "name": "pawfriends",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

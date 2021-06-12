@@ -1,5 +1,6 @@
-import React, { FC, CSSProperties } from "react";
+import React, { useEffect, FC, CSSProperties } from "react";
 import { Typography } from "antd";
+import src from "*.avif";
 
 const { Text } = Typography;
 
@@ -10,6 +11,21 @@ interface IProps {
 const Banner: React.FC<IProps> = (props) => {
   const { bannerUrl, title } = props;
 
+  useEffect(() => {
+    const objects = document.getElementsByClassName("asyncImage");
+    Array.from(objects).map((item) => {
+      // Start loading image
+      const img = new Image();
+      img.src = item.getAttribute("data-src") as string;
+
+      // Once image is loaded replace the src of the HTML element
+      img.onload = () => {
+        item.classList.remove("asyncImage");
+        item.setAttribute("src", img.src);
+      };
+    });
+  }, []);
+
   return (
     <div style={box}>
       <div style={text}>
@@ -18,10 +34,18 @@ const Banner: React.FC<IProps> = (props) => {
         </Text>
       </div>
       <img
-        height="200px"
+        // high reso image
+        data-src={process.env.PUBLIC_URL + `/BannerImages/${bannerUrl}.jpeg`}
+        className="asyncImage"
+        height="500px"
         style={{ objectFit: "cover" }}
         width="100%"
-        src={process.env.PUBLIC_URL + `/BannerImages/${bannerUrl}.jpeg`}
+        src={
+          process.env.PUBLIC_URL +
+          `/BannerImages/${bannerUrl}` +
+          `-min` +
+          `.jpeg`
+        }
       ></img>
     </div>
   );

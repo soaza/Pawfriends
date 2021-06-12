@@ -4,19 +4,22 @@ import "../../App.css";
 import FadeIn from "react-fade-in";
 import { getDogs } from "../../common/api";
 import Banner from "../../components/Common/Banner";
+import { Spin } from "antd";
 
 const { useEffect, useState } = React;
 
 const DogPage: React.FC = () => {
   const [dogs, setDogs] = useState<IDogData[]>();
   const [dogImages, setDogImages] = useState<IDogImageEndpoint[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const loadDogs = async () => {
+      setLoading(true);
       const response = await getDogs();
       setDogs(response.dogs);
       setDogImages(response.images);
-      console.log(response);
+      setLoading(false);
     };
     loadDogs();
   }, []);
@@ -24,6 +27,18 @@ const DogPage: React.FC = () => {
   return (
     <>
       <Banner title="Our Dogs" bannerUrl="dogs" />
+
+      {loading && (
+        <Spin
+          style={{
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        />
+      )}
 
       {dogs && dogImages.length > 0 && (
         <FadeIn>
