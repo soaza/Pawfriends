@@ -20,7 +20,7 @@ const App: FC = () => {
           <Route path="/" component={MainPage}></Route>
           <Route path="/dogs" component={DogPage}></Route>
           <Route path="/exco" component={ExcoPage}></Route>
-          <Route path="//activity" component={ActivityPage}></Route>
+          <Route path="/activity" component={ActivityPage}></Route>
           <Route path="/contact" component={ContactPage}></Route>
         </Switch>
       </div>
