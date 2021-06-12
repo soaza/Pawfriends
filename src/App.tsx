@@ -17,12 +17,12 @@ const App: FC = () => {
 
       <div className="App">
         <Switch location={location} key={location.pathname}>
+          <Route exact path="/" component={MainPage}></Route>
+          <Route exact path="/Pawfriends" component={MainPage}></Route>
           <Route path="/dogs" component={DogPage}></Route>
           <Route path="/exco" component={ExcoPage}></Route>
           <Route path="/activity" component={ActivityPage}></Route>
           <Route path="/contact" component={ContactPage}></Route>
-          <Route exact path="/" component={MainPage}></Route>
-          <Route exact path="/Pawfriends" component={MainPage}></Route>
         </Switch>
       </div>
     </>
