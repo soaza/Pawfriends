@@ -21,7 +21,8 @@ const App: FC = () => {
           <Route exact path="/exco" component={ExcoPage}></Route>
           <Route exact path="/activity" component={ActivityPage}></Route>
           <Route exact path="/contact" component={ContactPage}></Route>
-          <Route path="/" component={MainPage}></Route>
+          <Route exact path="/" component={MainPage}></Route>
+          <Route exact path="/Pawfriends" component={MainPage}></Route>
         </Switch>
       </div>
     </>
