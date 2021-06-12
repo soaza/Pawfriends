@@ -1,17 +1,24 @@
-import { FC, CSSProperties } from "react";
+import React, { FC, CSSProperties } from "react";
 
 import "../../App.css";
 import ActivityBoard from "./ActivityBoard";
 import FadeIn from "react-fade-in";
 import Banner from "../../components/Common/Banner";
+import { Result, Button } from "antd";
 
 const ActivityPage: FC = () => (
   <>
-    <Banner title="Our Activities" bannerUrl="activity-page" />
+    {/* <Banner title="Our Activit/ies" bannerUrl="activity-page" /> */}
 
-    <FadeIn>
+    <Result
+      status="403"
+      title="Page under development"
+      subTitle="Stay tuned for upcoming updates!"
+    />
+
+    {/* <FadeIn>
       <ActivityBoard />
-    </FadeIn>
+    </FadeIn> */}
   </>
 );
 

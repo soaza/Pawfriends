@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Card, Row, Col, Avatar, Typography } from "antd";
+import { Card, Row, Col, Avatar, Typography, Grid } from "antd";
 import { getMainDescription } from "../../common/api";
 import ReactHTMLParser from "react-html-parser";
 
@@ -7,6 +7,11 @@ const { Title } = Typography;
 const { useEffect, useState } = React;
 const Introduction: React.FC = () => {
   const [intro, setIntro] = useState<string>();
+
+  const bp = Grid.useBreakpoint();
+  const isMobile = (bp.xs || bp.sm) && !bp.md;
+  console.log(isMobile);
+
   useEffect(() => {
     const loadIntro = async () => {
       const desc = await getMainDescription();
@@ -17,7 +22,7 @@ const Introduction: React.FC = () => {
   return (
     <>
       <Row justify="space-between">
-        <Col span={12}>
+        <Col span={24} lg={12}>
           <Row justify="center">
             <Avatar
               size={120}
@@ -27,10 +32,10 @@ const Introduction: React.FC = () => {
           <Title style={{ textAlign: "center" }}>NUS Pawfriends</Title>
           {intro && <p style={{ fontSize: 16 }}>{ReactHTMLParser(intro)}</p>}
         </Col>
-        <Col span={10}>
+        <Col span={24} lg={10}>
           <video
             controls
-            style={{ height: 400, width: 600 }}
+            style={{ height: 400, width: isMobile ? "80vw" : 600 }}
             src={process.env.PUBLIC_URL + "/MainPage/video.mp4"}
           />
         </Col>

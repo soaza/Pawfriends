@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import DefaultLayout from "./components/Layout";
 import DogPage from "./pages/DogPage/DogPage";
 import ExcoPage from "./pages/ExcoPage/ExcoPage";
