@@ -1,7 +1,8 @@
 # NUS Pawfriends Website
-This website is built to be the new official website for NUS Pawfriends, serving as a platform to reach out to the committee and introuduce the club.
+This website is built to be the new official website for NUS Pawfriends, serving as a platform to reach out to the committee and introduce the club.
 <p>
-<i> Development still in progress</i>
+
+ Check it out here: https://soaza.github.io/Pawfriends
  </p>
 
 ## Tech-stack Used:
