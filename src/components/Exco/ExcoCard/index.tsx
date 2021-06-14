@@ -21,6 +21,7 @@ const ExcoCard: React.FC<IProps> = (props) => {
             cover={
               <>
                 <img
+                  alt="exco-img"
                   style={{ objectFit: "cover" }}
                   height={300}
                   width={300}

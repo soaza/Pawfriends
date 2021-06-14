@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Card, Row, Col, Avatar, Typography, Grid, Skeleton } from "antd";
+import { Row, Col, Avatar, Typography, Grid, Skeleton } from "antd";
 import { getMainDescription } from "../../common/api";
 import ReactHTMLParser from "react-html-parser";
 
@@ -28,7 +28,12 @@ const Introduction: React.FC = () => {
           <Row justify="center">
             <Avatar
               size={120}
-              icon={<img src={process.env.PUBLIC_URL + "/Dogs/Lucky_2.jpg"} />}
+              icon={
+                <img
+                  alt="lucky"
+                  src={process.env.PUBLIC_URL + "/Dogs/Lucky_2.jpg"}
+                />
+              }
             />
           </Row>
           <Title style={{ textAlign: "center" }}>NUS Pawfriends</Title>

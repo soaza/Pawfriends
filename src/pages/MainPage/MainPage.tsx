@@ -1,9 +1,9 @@
-import React, { FC, CSSProperties } from "react";
+import React, { FC } from "react";
 import "../../App.css";
 import Introduction from "./introduction";
 import Banner from "../../components/Common/Banner";
 import FadeIn from "react-fade-in";
-import { Card, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import Boxes from "./Boxes";
 
 const MainPage: FC = () => (

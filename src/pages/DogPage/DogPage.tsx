@@ -49,32 +49,4 @@ const DogPage: React.FC = () => {
   );
 };
 
-const box: React.CSSProperties = {
-  position: "relative",
-  textAlign: "center",
-  color: "white",
-  marginBottom: "64px",
-};
-
-const text: React.CSSProperties = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-};
-
-const s = {
-  title: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    // color: "black",
-    // fontFamily: "Arial",
-    // fontSize: "50px",
-    // lineHeight: "48px",
-    // margin: " 0 0 50px",
-    // textShadow: "1px 1px 2px #082b34",
-  },
-};
-
 export default DogPage;

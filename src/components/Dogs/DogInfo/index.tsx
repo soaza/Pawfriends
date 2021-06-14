@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC } from "react";
 import { ManOutlined, WomanOutlined } from "@ant-design/icons";
 
 import { Modal, Typography, Row, Col, Carousel, Empty, Card, Grid } from "antd";
@@ -31,11 +31,12 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
             <Carousel autoplay autoplaySpeed={3000} dotPosition="top">
               {GalleryArr.map((num) => {
                 const imageToDisplay = images.filter(
-                  (image) => image.gallery_position == num
+                  (image) => image.gallery_position === num
                 )[0];
 
                 return imageToDisplay ? (
                   <img
+                    alt="carousell-img"
                     height={isMobile ? "300px" : "700px"}
                     object-fit="cover"
                     src={imageToDisplay.image_url}
@@ -45,7 +46,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
                 );
               })}
             </Carousel>
-            {images.length == 0 && (
+            {images.length === 0 && (
               <Empty
                 description={false}
                 imageStyle={{ height: "500px", width: "100%" }}

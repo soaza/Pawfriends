@@ -48,9 +48,9 @@ async function post<T>(request: IRequest): Promise<T> {
   return await makeRequest(request, "POST");
 }
 
-async function remove<T>(request: IRequest): Promise<T> {
-  return await makeRequest(request, "DELETE");
-}
+// async function remove<T>(request: IRequest): Promise<T> {
+//   return await makeRequest(request, "DELETE");
+// }
 
 // Dogs
 

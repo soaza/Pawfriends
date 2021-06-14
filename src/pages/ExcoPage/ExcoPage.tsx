@@ -1,4 +1,4 @@
-import React, { FC, CSSProperties, useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Row, Col, Spin } from "antd";
 
 import "../../App.css";
@@ -51,28 +51,6 @@ const ExcoPage: FC = () => {
       <div style={{ height: "50px" }}></div>
     </>
   );
-};
-
-const box: CSSProperties = {
-  position: "relative",
-  textAlign: "center",
-  color: "white",
-  marginBottom: "64px",
-};
-
-const text: CSSProperties = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-};
-
-const s = {
-  title: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-  },
 };
 
 export default ExcoPage;

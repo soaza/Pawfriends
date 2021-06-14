@@ -1,6 +1,5 @@
-import React, { useEffect, FC, CSSProperties } from "react";
+import React, { useEffect, CSSProperties } from "react";
 import { Typography } from "antd";
-import src from "*.avif";
 
 const { Text } = Typography;
 
@@ -24,6 +23,7 @@ const Banner: React.FC<IProps> = (props) => {
         item.classList.remove("asyncImage");
         item.setAttribute("src", img.src);
       };
+      return null;
     });
   }, []);
 
@@ -36,6 +36,7 @@ const Banner: React.FC<IProps> = (props) => {
       </div>
       <img
         // high reso image
+        alt="banner"
         data-src={process.env.PUBLIC_URL + `/BannerImages/${bannerUrl}.jpeg`}
         className="asyncImage"
         height="400px"
@@ -56,7 +57,6 @@ const box: CSSProperties = {
   position: "relative",
   textAlign: "center",
   color: "white",
-  // marginBottom: "64px",
 };
 
 const text: CSSProperties = {
@@ -64,20 +64,6 @@ const text: CSSProperties = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-};
-
-const s = {
-  title: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    // color: "black",
-    // fontFamily: "Arial",
-    // fontSize: "50px",
-    // lineHeight: "48px",
-    // margin: " 0 0 50px",
-    // textShadow: "1px 1px 2px #082b34",
-  },
 };
 
 export default Banner;

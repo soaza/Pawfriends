@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import { Card, Row, Col, Empty } from "antd";
 import DogInfo from "../DogInfo";
 
@@ -8,7 +8,7 @@ const DogCard: React.FC<{ dog: IDogData; images: IDogImageEndpoint[] }> = ({
   dog,
   images,
 }) => {
-  const imageToShow = images?.filter((image) => image.gallery_position == 0)[0]
+  const imageToShow = images?.filter((image) => image.gallery_position === 0)[0]
     ?.image_url;
   const [modal, showModal] = useState<boolean>(false);
   return (
@@ -30,6 +30,7 @@ const DogCard: React.FC<{ dog: IDogData; images: IDogImageEndpoint[] }> = ({
             cover={
               imageToShow ? (
                 <img
+                  alt="dog-cover"
                   style={{ objectFit: "cover" }}
                   height="400px"
                   src={imageToShow}

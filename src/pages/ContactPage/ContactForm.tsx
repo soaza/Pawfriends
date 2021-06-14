@@ -11,18 +11,22 @@ const ContactForm: React.FC = () => {
         {!isMobile && (
           <Row justify="center">
             <img
+              alt="lucky"
               style={{ height: 300 }}
               src={process.env.PUBLIC_URL + "/Dogs/Lucky.jpg"}
             />
             <img
+              alt="hugo"
               style={{ height: 300 }}
               src={process.env.PUBLIC_URL + "/Dogs/Hugo.jpg"}
             />
             <img
+              alt="rambo"
               style={{ height: 300 }}
               src={process.env.PUBLIC_URL + "/Dogs/Rambo_2.jpg"}
             />
             <img
+              alt="junie"
               style={{ height: 300 }}
               src={process.env.PUBLIC_URL + "/Dogs/Rambo_and_Junie.jpg"}
             />

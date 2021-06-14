@@ -35,6 +35,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
           >
             <strong>NUS Pawfriends </strong>
             <img
+              alt="paw-img"
               color="white"
               height="16px"
               width="16px"
