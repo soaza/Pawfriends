@@ -18,6 +18,10 @@ Back-end
 
 AWS S3 used to host images
 
+Deployed on:
+Front-ends: Github-pages
+Back-ends: Heroku
+
 
 
 ## Screenshots
