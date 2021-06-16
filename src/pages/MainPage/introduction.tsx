@@ -12,15 +12,24 @@ const Introduction: React.FC = () => {
   const bp = Grid.useBreakpoint();
   const isMobile = (bp.xs || bp.sm) && !bp.md;
 
+  const loadIntro = async () => {
+    setLoading(true);
+    const desc = await getMainDescription();
+    setIntro(desc);
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const loadIntro = async () => {
-      setLoading(true);
-      const desc = await getMainDescription();
-      setIntro(desc);
-      setLoading(false);
-    };
     loadIntro();
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      loadIntro();
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <Row justify="space-between">
