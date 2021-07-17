@@ -4,6 +4,23 @@ This website is built to be the new official website for NUS Pawfriends, serving
 
  Check it out here: https://soaza.github.io/Pawfriends
  </p>
+ 
+## Starting the project on your local machine:
+1)Clone the repo
+
+`git clone https://github.com/soaza/Pawfriends.git`
+
+2)Install the npm packages
+
+`npm install`
+
+3)Start the project
+
+`npm start`
+
+4)You can view it at localhost:3000
+
+
 
 ## Tech-stack Used:
 Front-end
