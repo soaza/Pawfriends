@@ -2,6 +2,7 @@ import { FC } from "react";
 
 import { Modal, Row, Col, Carousel, Empty, Grid, Tabs } from "antd";
 import DogInfoDescription from "./dog-info-description";
+import { fbLinkDogs } from "../../../common/constants";
 
 interface IProps {
   dog: IDogData;
@@ -15,6 +16,7 @@ const { TabPane } = Tabs;
 const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
   const bp = Grid.useBreakpoint();
   const isMobile = (bp.xs || bp.sm) && !bp.md;
+  const fbLink = fbLinkDogs.find((link) => link.dogName == dog.dog_name)?.link;
 
   return (
     <>
@@ -58,26 +60,28 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
                 <DogInfoDescription dog={dog} />
               </TabPane>
 
-              <TabPane
-                style={{
-                  overflowX: "scroll",
-                  overflowY: "scroll",
-                  height: 500,
-                }}
-                tab={"My activities"}
-                key="2"
-              >
-                <iframe
-                  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FHopeForAnimalsSG%2Fposts%2F4425690077445469&show_text=true&width=500"
-                  style={{ border: "none", overflow: "hidden" }}
-                  height={800}
-                  width={500}
-                  scrolling="no"
-                  frameBorder="0"
-                  allowFullScreen
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
-              </TabPane>
+              {fbLink && (
+                <TabPane
+                  style={{
+                    overflowX: "scroll",
+                    overflowY: "scroll",
+                    height: 500,
+                  }}
+                  tab={"My activities"}
+                  key="2"
+                >
+                  <iframe
+                    src={fbLink}
+                    style={{ border: "none", overflow: "hidden" }}
+                    height={800}
+                    width={500}
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  ></iframe>
+                </TabPane>
+              )}
             </Tabs>
           </Col>
         </Row>

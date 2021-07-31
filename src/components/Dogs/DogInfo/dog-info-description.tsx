@@ -23,7 +23,7 @@ const DogInfoDescription: React.FC<IProps> = (props) => {
       </Title>
 
       <Row>
-        <Col span={12}>
+        <Col span={24}>
           <p
             style={{
               fontFamily: "Abel",
@@ -39,7 +39,7 @@ const DogInfoDescription: React.FC<IProps> = (props) => {
           </p>
         </Col>
 
-        <Col span={12}>
+        {/* <Col span={12}>
           <p
             style={{
               fontFamily: "Abel",
@@ -53,7 +53,7 @@ const DogInfoDescription: React.FC<IProps> = (props) => {
             <br />
             years old!
           </p>
-        </Col>
+        </Col> */}
       </Row>
 
       <Card
