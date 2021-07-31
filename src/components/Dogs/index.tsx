@@ -22,6 +22,7 @@ const Dogs: React.FC<{ dogs: IDogData[]; dogImages: IDogImageEndpoint[] }> = ({
               const filteredImages = dogImages.filter(
                 (image) => image.dog_id === dog.dog_id
               );
+
               return (
                 <DogCard
                   dog={dog}

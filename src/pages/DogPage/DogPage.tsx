@@ -42,7 +42,12 @@ const DogPage: React.FC = () => {
 
       {!loading && dogs && dogImages.length > 0 && (
         <FadeIn>
-          <Dogs dogs={dogs} dogImages={dogImages} />
+          <Dogs
+            // dogs = {dogs}
+            // We filter out Hugo's id cuz we cant show it in production :(
+            dogs={dogs.filter((dog) => dog.dog_id !== 1)}
+            dogImages={dogImages}
+          />
         </FadeIn>
       )}
     </>
