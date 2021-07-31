@@ -1,11 +1,7 @@
 import { FC } from "react";
-import { ManOutlined, WomanOutlined } from "@ant-design/icons";
 
-import { Modal, Typography, Row, Col, Carousel, Empty, Card, Grid } from "antd";
-
-const { Title } = Typography;
-
-const GalleryArr = [1, 2, 3, 4];
+import { Modal, Row, Col, Carousel, Empty, Grid, Tabs } from "antd";
+import DogInfoDescription from "./dog-info-description";
 
 interface IProps {
   dog: IDogData;
@@ -14,6 +10,8 @@ interface IProps {
   showModal: (modal: boolean) => void;
 }
 
+const { TabPane } = Tabs;
+
 const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
   const bp = Grid.useBreakpoint();
   const isMobile = (bp.xs || bp.sm) && !bp.md;
@@ -21,15 +19,15 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
   return (
     <>
       <Modal
-        width={"75%"}
+        width={"70%"}
         footer={false}
         onCancel={() => showModal(false)}
         visible={modal}
       >
         <Row justify="space-between">
-          <Col xs={24} lg={10} span={12}>
-            <Carousel autoplay autoplaySpeed={3000} dotPosition="top">
-              {GalleryArr.map((num) => {
+          <Col xs={24} lg={8} span={12}>
+            <Carousel autoplay autoplaySpeed={1500} dotPosition="top">
+              {Array.from(Array(4)).map((_, num) => {
                 const imageToDisplay = images.filter(
                   (image) => image.gallery_position === num
                 )[0];
@@ -37,7 +35,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
                 return imageToDisplay ? (
                   <img
                     alt="carousell-img"
-                    height={isMobile ? "300px" : "700px"}
+                    height={isMobile ? 300 : 500}
                     object-fit="cover"
                     src={imageToDisplay.image_url}
                   />
@@ -54,72 +52,33 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
             )}
           </Col>
 
-          <Col lg={12} span={24}>
-            <Title
-              style={{
-                textAlign: "center",
-                fontSize: 60,
-                fontFamily: "Abel",
-              }}
-            >
-              {dog.dog_name}
-            </Title>
+          <Col lg={14} span={24}>
+            <Tabs defaultActiveKey="1" tabPosition={isMobile ? "top" : "right"}>
+              <TabPane tab={"Description"} key="1">
+                <DogInfoDescription dog={dog} />
+              </TabPane>
 
-            <Row>
-              <Col span={12}>
-                <p
-                  style={{
-                    fontFamily: "Abel",
-
-                    textAlign: "center",
-                    fontSize: 45,
-                    color: dog.dog_gender === "Male" ? "#1790FF" : "pink",
-                  }}
-                >
-                  {dog.dog_gender}
-                  <br />
-                  {dog.dog_gender === "Male" ? (
-                    <ManOutlined />
-                  ) : (
-                    <WomanOutlined />
-                  )}
-                </p>
-              </Col>
-
-              <Col span={12}>
-                <p
-                  style={{
-                    fontFamily: "Abel",
-                    textAlign: "center",
-                    fontSize: 30,
-                  }}
-                >
-                  I am
-                  <br />
-                  <span style={{ fontSize: 45 }}> {dog.dog_age} </span>
-                  <br />
-                  years old!
-                </p>
-              </Col>
-            </Row>
-
-            <Card
-              style={{
-                borderStyle: "solid",
-                borderWidth: "5px",
-                borderRadius: "10px",
-              }}
-            >
-              <p
+              <TabPane
                 style={{
-                  fontFamily: "Abel",
-                  textAlign: "center",
-                  fontSize: 24,
+                  overflowX: "scroll",
+                  overflowY: "scroll",
+                  height: 500,
                 }}
+                tab={"My activities"}
+                key="2"
               >
-                {dog.dog_characteristics}
-              </p>
-            </Card>
+                <iframe
+                  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FHopeForAnimalsSG%2Fposts%2F4425690077445469&show_text=true&width=500"
+                  style={{ border: "none", overflow: "hidden" }}
+                  height={800}
+                  width={500}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
+              </TabPane>
+            </Tabs>
           </Col>
         </Row>
       </Modal>

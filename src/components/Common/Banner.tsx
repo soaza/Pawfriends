@@ -1,5 +1,5 @@
 import React, { useEffect, CSSProperties } from "react";
-import { Typography } from "antd";
+import { Grid, Typography } from "antd";
 
 const { Text } = Typography;
 
@@ -9,7 +9,8 @@ interface IProps {
   noMargin?: boolean;
 }
 const Banner: React.FC<IProps> = (props) => {
-  const { bannerUrl, title, noMargin } = props;
+  const { title, noMargin } = props;
+  const isMobile = Grid.useBreakpoint().xs;
 
   useEffect(() => {
     const objects = document.getElementsByClassName("asyncImage");
@@ -40,7 +41,7 @@ const Banner: React.FC<IProps> = (props) => {
         data-src={process.env.PUBLIC_URL + `/BannerImages/banner.jpeg`}
         className="asyncImage"
         height="400px"
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: isMobile ? "cover" : "fill" }}
         width="100%"
         src={process.env.PUBLIC_URL + `/BannerImages/banner-min.jpg`}
       ></img>
