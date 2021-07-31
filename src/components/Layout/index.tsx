@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import SocialMediaAffix from "./social-media-affix";
 
 const { Header } = Layout;
-const DefaultLayout: FC<{ page: string }> = ({ page, children }) => {
+const DefaultLayout: FC<{ page: string }> = ({ page }) => {
   const bp = Grid.useBreakpoint();
   const isMobile = bp.xs;
 
@@ -66,8 +66,6 @@ const DefaultLayout: FC<{ page: string }> = ({ page, children }) => {
 
           {!isMobile && <SocialMediaAffix />}
         </Header>
-
-        {children}
       </Layout>
     </>
   );
