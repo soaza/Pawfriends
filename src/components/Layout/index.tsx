@@ -1,9 +1,8 @@
 import { FC } from "react";
-import { Affix, Button, Col, Grid, Layout, Menu, Row, Space } from "antd";
+import { Grid, Layout, Menu } from "antd";
 import "../../App.css";
 
 import { Link } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
 import SocialMediaAffix from "./social-media-affix";
 
 const { Header } = Layout;
