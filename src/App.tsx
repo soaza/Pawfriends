@@ -13,19 +13,19 @@ const App: FC = () => {
   const location = useLocation();
   return (
     <>
-      <DefaultLayout page={location.pathname}></DefaultLayout>
-
-      <div className="App">
-        <Switch location={location} key={location.pathname}>
-          <Route exact path="/" component={MainPage}></Route>
-          <Route exact path="/Pawfriends" component={MainPage}></Route>
-          <Route path="/dogs" component={DogPage}></Route>
-          <Route path="/exco" component={ExcoPage}></Route>
-          <Route path="/about-us" component={AboutUsPage}></Route>
-          <Route path="/activity" component={ActivityPage}></Route>
-          <Route path="/contact" component={ContactPage}></Route>
-        </Switch>
-      </div>
+      <DefaultLayout page={location.pathname}>
+        <div className="App">
+          <Switch location={location} key={location.pathname}>
+            <Route exact path="/" component={MainPage}></Route>
+            <Route exact path="/Pawfriends" component={MainPage}></Route>
+            <Route path="/dogs" component={DogPage}></Route>
+            <Route path="/exco" component={ExcoPage}></Route>
+            <Route path="/about-us" component={AboutUsPage}></Route>
+            <Route path="/activity" component={ActivityPage}></Route>
+            <Route path="/contact" component={ContactPage}></Route>
+          </Switch>
+        </div>
+      </DefaultLayout>
     </>
   );
 };
