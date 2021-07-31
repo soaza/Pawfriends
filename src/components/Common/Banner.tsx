@@ -37,17 +37,12 @@ const Banner: React.FC<IProps> = (props) => {
       <img
         // high reso image
         alt="banner"
-        data-src={process.env.PUBLIC_URL + `/BannerImages/${bannerUrl}.jpeg`}
+        data-src={process.env.PUBLIC_URL + `/BannerImages/banner.jpeg`}
         className="asyncImage"
         height="400px"
         style={{ objectFit: "cover" }}
         width="100%"
-        src={
-          process.env.PUBLIC_URL +
-          `/BannerImages/${bannerUrl}` +
-          `-min` +
-          `.jpeg`
-        }
+        src={process.env.PUBLIC_URL + `/BannerImages/banner-min.jpg`}
       ></img>
     </div>
   );
