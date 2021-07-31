@@ -4,6 +4,23 @@ This website is built to be the new official website for NUS Pawfriends, serving
 
  Check it out here: https://soaza.github.io/Pawfriends
  </p>
+ 
+## Starting the project on your local machine:
+1)Clone the repo
+
+`git clone https://github.com/soaza/Pawfriends.git`
+
+2)Install the npm packages
+
+`npm install`
+
+3)Start the project
+
+`npm start`
+
+4)You can view it at localhost:3000
+
+
 
 ## Tech-stack Used:
 Front-end
@@ -18,23 +35,27 @@ Back-end
 
 AWS S3 used to host images
 
+Deployed on:
+- Front-ends: Github-pages
+- Back-ends: Heroku
+
 
 
 ## Screenshots
-<b>Main Page</b>
-![Screenshot 2021-06-08 at 10 45 52 PM](https://user-images.githubusercontent.com/65228562/121207156-a352af80-c8ab-11eb-9e00-1e9b871733e7.png)
+### <b>Main Page</b>
+![Screenshot 2021-06-15 at 3 30 58 PM](https://user-images.githubusercontent.com/65228562/122011458-b22aec00-cdee-11eb-91d9-a73d196a3698.png)
 
-<b>Dogs Page</b>
-![Screenshot 2021-06-08 at 10 46 03 PM](https://user-images.githubusercontent.com/65228562/121207146-a0f05580-c8ab-11eb-8ce8-b3c70635a683.png)
+### <b>Dogs Page</b>
+![Screenshot 2021-06-15 at 3 31 20 PM](https://user-images.githubusercontent.com/65228562/122011493-beaf4480-cdee-11eb-9abd-659142de178e.png)
 
-<b>Exco Page</b>
-![Screenshot 2021-06-08 at 10 46 12 PM](https://user-images.githubusercontent.com/65228562/121207133-9e8dfb80-c8ab-11eb-91c2-cdbb4c9ea09b.png)
+### <b>Exco Page</b>
+![Screenshot 2021-06-15 at 3 31 35 PM](https://user-images.githubusercontent.com/65228562/122011537-c7a01600-cdee-11eb-89e0-747c064e75a7.png)
 
-<b>What we do Page</b>
+### <b>What we do Page</b>
  ![Screenshot 2021-06-08 at 10 46 21 PM](https://user-images.githubusercontent.com/65228562/121207123-9d5cce80-c8ab-11eb-8f7c-805d839f1a19.png)
  
-<b>Contact Us Page</b>
-![Screenshot 2021-06-08 at 10 46 29 PM](https://user-images.githubusercontent.com/65228562/121207102-9930b100-c8ab-11eb-804c-2521332c058b.png)
+### <b>Contact Us Page</b>
+![Screenshot 2021-06-15 at 3 31 49 PM](https://user-images.githubusercontent.com/65228562/122011570-cf5fba80-cdee-11eb-9d3d-eba3261d14be.png)
 
 
 
