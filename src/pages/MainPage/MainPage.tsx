@@ -4,7 +4,6 @@ import Introduction from "./introduction";
 import Banner from "../../components/Common/Banner";
 import FadeIn from "react-fade-in";
 import { Col, Row } from "antd";
-import Boxes from "./Boxes";
 
 const MainPage: FC = () => (
   <>
@@ -15,8 +14,6 @@ const MainPage: FC = () => (
         <FadeIn>
           <Introduction />
         </FadeIn>
-
-        <Boxes />
       </Col>
     </Row>
   </>

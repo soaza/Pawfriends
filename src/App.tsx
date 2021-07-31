@@ -7,6 +7,7 @@ import ExcoPage from "./pages/ExcoPage/ExcoPage";
 import ActivityPage from "./pages/ActivityPage/ActivityPage";
 import MainPage from "./pages/MainPage/MainPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 
 const App: FC = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const App: FC = () => {
           <Route exact path="/Pawfriends" component={MainPage}></Route>
           <Route path="/dogs" component={DogPage}></Route>
           <Route path="/exco" component={ExcoPage}></Route>
+          <Route path="/about-us" component={AboutUsPage}></Route>
           <Route path="/activity" component={ActivityPage}></Route>
           <Route path="/contact" component={ContactPage}></Route>
         </Switch>

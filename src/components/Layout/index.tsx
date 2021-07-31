@@ -44,10 +44,15 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
             <Link to="/" />
           </Menu.Item>
 
-          <Menu.Item style={s.Menu} key="/activity">
+          <Menu.Item style={s.Menu} key="/about-us">
+            <strong>About Us</strong>
+            <Link to="/about-us" />
+          </Menu.Item>
+
+          {/* <Menu.Item style={s.Menu} key="/activity">
             <strong>Our Activities</strong>
             <Link to="/activity" />
-          </Menu.Item>
+          </Menu.Item> */}
 
           <Menu.Item style={s.Menu} key="/contact">
             <strong>Contact Us</strong>
