@@ -16,7 +16,7 @@ const { TabPane } = Tabs;
 const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
   const bp = Grid.useBreakpoint();
   const isMobile = (bp.xs || bp.sm) && !bp.md;
-  const fbLink = fbLinkDogs.find((link) => link.dogName == dog.dog_name)?.link;
+  const fbLink = fbLinkDogs.find((link) => link.dogName === dog.dog_name)?.link;
 
   return (
     <>
@@ -71,6 +71,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
                   key="2"
                 >
                   <iframe
+                    title="Dog Activity"
                     src={fbLink}
                     style={{ border: "none", overflow: "hidden" }}
                     height={800}
