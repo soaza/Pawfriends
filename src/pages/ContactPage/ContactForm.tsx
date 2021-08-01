@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Row, Col, Grid, Card, Tabs } from "antd";
 import { SocialIcon } from "react-social-icons";
+import ContactMap from "./contact-map";
 
 const { TabPane } = Tabs;
 
@@ -107,6 +108,7 @@ const ContactForm: React.FC = () => {
   return (
     <Row justify="center">
       <Col span={22} lg={18}>
+        <ContactMap />
         <Tabs defaultActiveKey="1" tabPosition="top">
           {links.map((cate, index) => {
             return (
