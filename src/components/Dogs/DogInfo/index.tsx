@@ -28,7 +28,7 @@ const DogInfo: FC<IProps> = ({ dog, images, modal, showModal }) => {
       >
         <Row justify="space-between">
           <Col xs={24} lg={8} span={12}>
-            <Carousel autoplay autoplaySpeed={1500} dotPosition="top">
+            <Carousel dotPosition="top">
               {Array.from(Array(4)).map((_, num) => {
                 const imageToDisplay = images.filter(
                   (image) => image.gallery_position === num
