@@ -105,44 +105,60 @@ const ContactForm: React.FC = () => {
     { category: "Mutts and Mittens", linkArr: mmLinks },
   ];
 
+  const isMobile = Grid.useBreakpoint().xs;
+
   return (
     <Row justify="center">
       <Col span={22} lg={18}>
-        <ContactMap />
-        <Tabs defaultActiveKey="1" tabPosition="top">
-          {links.map((cate, index) => {
-            return (
-              <TabPane tab={cate.category} key={index}>
-                <p style={{ color: "gray" }}>
-                  Click on the icon to access the link in a new window
-                </p>
-                {cate.linkArr.map((link) => {
-                  return (
-                    <Card bodyStyle={{ textOverflow: "ellipsis" }}>
-                      <Row>
-                        <SocialIcon
-                          style={{ marginRight: 20 }}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            window.open(link.link);
-                          }}
-                          url={link.link}
-                        />
+        <Row justify="space-between">
+          <Col span={22} lg={10}>
+            <h1>Getting here</h1>
+            <p>
+              <b>By bus:</b> Take 975/975B from Choa Chu Kang MRT station then
+              walk 13 minutes.
+            </p>
+            <ContactMap />
+          </Col>
 
-                        <Col>
-                          <h3>
-                            <b>{link.title}</b>
-                          </h3>
-                          <p>{link.description}</p>
-                        </Col>
-                      </Row>
-                    </Card>
-                  );
-                })}
-              </TabPane>
-            );
-          })}
-        </Tabs>
+          <Col style={{ marginTop: isMobile ? 150 : 0 }} span={22} lg={10}>
+            <h1>Contacting Us</h1>
+
+            <Tabs defaultActiveKey="0" tabPosition="top">
+              {links.map((cate, index) => {
+                return (
+                  <TabPane tab={cate.category} key={index}>
+                    <p style={{ color: "gray" }}>
+                      Click on the icon to access the link in a new window
+                    </p>
+                    {cate.linkArr.map((link) => {
+                      return (
+                        <Card bodyStyle={{ textOverflow: "ellipsis" }}>
+                          <Row>
+                            <SocialIcon
+                              style={{ marginRight: 20 }}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.open(link.link);
+                              }}
+                              url={link.link}
+                            />
+
+                            <Col>
+                              <h3>
+                                <b>{link.title}</b>
+                              </h3>
+                              <p>{link.description}</p>
+                            </Col>
+                          </Row>
+                        </Card>
+                      );
+                    })}
+                  </TabPane>
+                );
+              })}
+            </Tabs>
+          </Col>
+        </Row>
       </Col>
     </Row>
   );
