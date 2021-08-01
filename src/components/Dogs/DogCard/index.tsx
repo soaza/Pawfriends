@@ -40,7 +40,12 @@ const DogCard: React.FC<{ dog: IDogData; images: IDogImageEndpoint[] }> = ({
               )
             }
           >
-            <Meta title={dog.dog_name} description="Good boi" />
+            <Meta
+              title={dog.dog_name}
+              description={
+                dog.dog_gender === "Female" ? "Good girl" : "Good boi"
+              }
+            />
           </Card>
         </Row>
       </Col>
