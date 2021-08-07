@@ -112,7 +112,7 @@ const ContactForm: React.FC = () => {
       <Col span={22} lg={18}>
         <Row justify="space-between">
           <Col span={22} lg={10}>
-            <h1>Getting here</h1>
+            <h1>Where our activities are located</h1>
             <p>
               <b>By bus:</b> Take 975/975B from Choa Chu Kang MRT station then
               walk 13 minutes.
@@ -121,7 +121,7 @@ const ContactForm: React.FC = () => {
           </Col>
 
           <Col style={{ marginTop: isMobile ? 150 : 0 }} span={22} lg={10}>
-            <h1>Contacting Us</h1>
+            <h1>Contacting Us/Our Affiliates</h1>
 
             <Tabs defaultActiveKey="0" tabPosition="top">
               {links.map((cate, index) => {
