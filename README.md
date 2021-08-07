@@ -2,7 +2,7 @@
 This website is built to be the new official website for NUS Pawfriends, serving as a platform to reach out to the committee and introduce the club.
 <p>
 
- Check it out here: https://soaza.github.io/Pawfriends
+ Check it out here: https://www.nuspawfriends.com
  </p>
  
 ## Starting the project on your local machine:
