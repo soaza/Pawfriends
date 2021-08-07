@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Pawfriends/static/css/main.43b618fd.chunk.css",
-    "main.js": "/Pawfriends/static/js/main.5b76ef3b.chunk.js",
-    "main.js.map": "/Pawfriends/static/js/main.5b76ef3b.chunk.js.map",
-    "runtime-main.js": "/Pawfriends/static/js/runtime-main.486b8e65.js",
-    "runtime-main.js.map": "/Pawfriends/static/js/runtime-main.486b8e65.js.map",
-    "static/css/2.de2ac02e.chunk.css": "/Pawfriends/static/css/2.de2ac02e.chunk.css",
-    "static/js/2.dc2b3511.chunk.js": "/Pawfriends/static/js/2.dc2b3511.chunk.js",
-    "static/js/2.dc2b3511.chunk.js.map": "/Pawfriends/static/js/2.dc2b3511.chunk.js.map",
-    "index.html": "/Pawfriends/index.html",
-    "static/css/2.de2ac02e.chunk.css.map": "/Pawfriends/static/css/2.de2ac02e.chunk.css.map",
-    "static/css/main.43b618fd.chunk.css.map": "/Pawfriends/static/css/main.43b618fd.chunk.css.map",
-    "static/js/2.dc2b3511.chunk.js.LICENSE.txt": "/Pawfriends/static/js/2.dc2b3511.chunk.js.LICENSE.txt"
+    "main.css": "/www.nuspawfriends.com/static/css/main.43b618fd.chunk.css",
+    "main.js": "/www.nuspawfriends.com/static/js/main.6c64c184.chunk.js",
+    "main.js.map": "/www.nuspawfriends.com/static/js/main.6c64c184.chunk.js.map",
+    "runtime-main.js": "/www.nuspawfriends.com/static/js/runtime-main.a102130c.js",
+    "runtime-main.js.map": "/www.nuspawfriends.com/static/js/runtime-main.a102130c.js.map",
+    "static/css/2.de2ac02e.chunk.css": "/www.nuspawfriends.com/static/css/2.de2ac02e.chunk.css",
+    "static/js/2.a8592347.chunk.js": "/www.nuspawfriends.com/static/js/2.a8592347.chunk.js",
+    "static/js/2.a8592347.chunk.js.map": "/www.nuspawfriends.com/static/js/2.a8592347.chunk.js.map",
+    "index.html": "/www.nuspawfriends.com/index.html",
+    "static/css/2.de2ac02e.chunk.css.map": "/www.nuspawfriends.com/static/css/2.de2ac02e.chunk.css.map",
+    "static/css/main.43b618fd.chunk.css.map": "/www.nuspawfriends.com/static/css/main.43b618fd.chunk.css.map",
+    "static/js/2.a8592347.chunk.js.LICENSE.txt": "/www.nuspawfriends.com/static/js/2.a8592347.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.486b8e65.js",
+    "static/js/runtime-main.a102130c.js",
     "static/css/2.de2ac02e.chunk.css",
-    "static/js/2.dc2b3511.chunk.js",
+    "static/js/2.a8592347.chunk.js",
     "static/css/main.43b618fd.chunk.css",
-    "static/js/main.5b76ef3b.chunk.js"
+    "static/js/main.6c64c184.chunk.js"
   ]
 }
