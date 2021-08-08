@@ -16,7 +16,7 @@ const App: FC = () => {
       <DefaultLayout page={location.pathname}></DefaultLayout>
 
       <div className="App">
-        <Switch location={location} key={location.pathname}>
+        <Switch>
           <Route exact path="/" component={MainPage}></Route>
           <Route path="/dogs" component={DogPage}></Route>
           <Route path="/exco" component={ExcoPage}></Route>
