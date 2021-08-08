@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import DefaultLayout from "./components/Layout";
+// import DefaultLayout from "./components/Layout";
 import DogPage from "./pages/DogPage/DogPage";
 import ExcoPage from "./pages/ExcoPage/ExcoPage";
 import ActivityPage from "./pages/ActivityPage/ActivityPage";
