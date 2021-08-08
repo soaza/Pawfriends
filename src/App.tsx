@@ -15,8 +15,6 @@ const App: FC = () => {
     <>
       <BrowserRouter>
         <div className="App">
-          <DefaultLayout />
-
           <Switch>
             <Route path="/dogs" component={DogPage}></Route>
             <Route path="/exco" component={ExcoPage}></Route>
