@@ -18,12 +18,12 @@ const App: FC = () => {
           <DefaultLayout />
 
           <Switch>
-            <Route exact path="/" component={MainPage}></Route>
             <Route path="/dogs" component={DogPage}></Route>
             <Route path="/exco" component={ExcoPage}></Route>
             <Route path="/about-us" component={AboutUsPage}></Route>
             <Route path="/activity" component={ActivityPage}></Route>
             <Route path="/contact" component={ContactPage}></Route>
+            <Route exact path="/" component={MainPage}></Route>
           </Switch>
         </div>
       </BrowserRouter>
