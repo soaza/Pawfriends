@@ -43,19 +43,20 @@ Deployed on:
 
 ## Screenshots
 ### <b>Main Page</b>
-![Screenshot 2021-06-15 at 3 30 58 PM](https://user-images.githubusercontent.com/65228562/122011458-b22aec00-cdee-11eb-91d9-a73d196a3698.png)
+![Screenshot 2021-08-08 at 2 18 45 PM](https://user-images.githubusercontent.com/65228562/128622796-1176a4ea-effa-4a66-a437-d1e0541878e4.png)
 
 ### <b>Dogs Page</b>
-![Screenshot 2021-06-15 at 3 31 20 PM](https://user-images.githubusercontent.com/65228562/122011493-beaf4480-cdee-11eb-9abd-659142de178e.png)
+![Screenshot 2021-08-08 at 2 19 03 PM](https://user-images.githubusercontent.com/65228562/128622803-cde4f287-6102-4160-859e-b99d8d330c6a.png)
 
 ### <b>Exco Page</b>
-![Screenshot 2021-06-15 at 3 31 35 PM](https://user-images.githubusercontent.com/65228562/122011537-c7a01600-cdee-11eb-89e0-747c064e75a7.png)
+![Screenshot 2021-08-08 at 2 19 20 PM](https://user-images.githubusercontent.com/65228562/128622810-fc6064ed-7f46-4520-ad80-0acee4891ef6.png)
 
-### <b>What we do Page</b>
- ![Screenshot 2021-06-08 at 10 46 21 PM](https://user-images.githubusercontent.com/65228562/121207123-9d5cce80-c8ab-11eb-8f7c-805d839f1a19.png)
+### <b>About Us</b>
+![Screenshot 2021-08-08 at 2 19 45 PM](https://user-images.githubusercontent.com/65228562/128622820-ddd61461-f662-4e22-8fcf-c5886dfe2abf.png)
+
  
 ### <b>Contact Us Page</b>
-![Screenshot 2021-06-15 at 3 31 49 PM](https://user-images.githubusercontent.com/65228562/122011570-cf5fba80-cdee-11eb-9d3d-eba3261d14be.png)
+![Screenshot 2021-08-08 at 2 19 55 PM](https://user-images.githubusercontent.com/65228562/128622823-677fdd26-bfca-4e35-ae3a-ebc182ed83d8.png)
 
 
 
