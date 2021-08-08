@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Grid, Layout, Menu } from "antd";
 import "../../App.css";
 
@@ -6,7 +5,8 @@ import { Link } from "react-router-dom";
 import SocialMediaAffix from "./social-media-affix";
 
 const { Header } = Layout;
-const DefaultLayout: FC<{ page: string }> = ({ page }) => {
+// const DefaultLayout: FC<{ page: string }> = ({ page }) => {
+const DefaultLayout = () => {
   const bp = Grid.useBreakpoint();
   const isMobile = bp.xs;
 
@@ -22,7 +22,7 @@ const DefaultLayout: FC<{ page: string }> = ({ page }) => {
             }}
             theme="dark"
             mode="horizontal"
-            selectedKeys={[page]}
+            // selectedKeys={[page]}
           >
             <Menu.Item style={s.Menu} key="/dogs">
               <strong>Our Dogs</strong>
