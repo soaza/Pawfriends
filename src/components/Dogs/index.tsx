@@ -14,7 +14,7 @@ const Dogs: React.FC<{ dogs: IDogData[]; dogImages: IDogImageEndpoint[] }> = ({
             style={{ marginBottom: 20 }}
             showIcon
             message=""
-            description="Click on any dog to see it learn more about our good bois"
+            description="Click on any dog to see it learn more about our doggos"
             type="info"
           />
           <Row gutter={[20, 20]}>
