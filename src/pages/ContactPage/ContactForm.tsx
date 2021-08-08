@@ -115,7 +115,7 @@ const ContactForm: React.FC = () => {
             <h1>Where our activities are located</h1>
             <p>
               <b>By bus:</b> Take 975/975B from Choa Chu Kang MRT station then
-              walk 13 minutes.
+              walk around 13 minutes.
             </p>
             <ContactMap />
           </Col>
