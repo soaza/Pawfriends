@@ -8,7 +8,7 @@ const { TabPane } = Tabs;
 const ContactForm: React.FC = () => {
   const pawfriendsLinks = [
     {
-      link: "https://soaza.github.io/Pawfriends",
+      link: "https://nuspawfriends.com",
       title: "Pawfriends' Website",
       description: "You are here!",
     },

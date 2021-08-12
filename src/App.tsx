@@ -15,12 +15,12 @@ const App = () => {
         <DefaultLayout />
 
         <Switch>
-          <Route exact path="/dogs" component={DogPage}></Route>
-          <Route exact path="/exco" component={ExcoPage}></Route>
-          <Route exact path="/about-us" component={AboutUsPage}></Route>
-          <Route exact path="/activity" component={ActivityPage}></Route>
-          <Route exact path="/contact" component={ContactPage}></Route>
-          <Route exact path="/" component={MainPage}></Route>
+          <Route exact path="/dogs" component={DogPage} />
+          <Route exact path="/exco" component={ExcoPage} />
+          <Route exact path="/about-us" component={AboutUsPage} />
+          <Route exact path="/activity" component={ActivityPage} />
+          <Route exact path="/contact" component={ContactPage} />
+          <Route exact path="/" component={MainPage} />
         </Switch>
       </div>
     </Router>
